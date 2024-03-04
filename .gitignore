@@ -1,6 +1,11 @@
 # Prerequisites
 *.d
 
+# COMENTARIO 
+
+.aux
+
+
 # Object files
 *.o
 *.ko
