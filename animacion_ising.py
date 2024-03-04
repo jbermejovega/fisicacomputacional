@@ -2,6 +2,7 @@
 # ANIMACION ISING
 #
 # CURSO 2023-2024
+# contenido
 # Genera una animación a partir de un fichero de datos con la configuración
 # del retículo en cada instante de tiempo
 # 
