@@ -1,0 +1,15 @@
+Hola a todos/as:
+
+En esta asignatura vamos a usar el sistema operativo Linux y su terminal para realizar las diferentes tareas de programación y simulación. Además de ser un sistema gratuito y de software libre, Linux mola porque mola. Además, durante la asignatura tendreis acceso a un cluster de supercomputación, Joel, que funciona con Linux.
+
+Es posible que muchos no os tengáis instalado en vuestros ordenadores. Si es el caso, teneis varias opciones:
+
+- Instalar una máquina virtual con Linux. Esto os permite correr un sistema Linux dentro de vuestro Windows o Mac. Tiene la ventaja de que tenéis acceso a todas las opciones de Linux y sólo tenéis que instalar un programa. La desventaja es que la máquina virtual comparte recursos con el sistema operativo "anfitrión", lo que puede afectar al rendimiento.
+
+- Hacer una partición con Linux en vuestro disco duro con Linux. Esto instala Linux al mismo nivel que vuestro sistema operativo. Al encender el ordenador podéis elegir qué sistema operativo utilizar. Tiene la ventaja de que así el sistema Linux puede acceder a todos los recursos del sistema. La desventaja es que es más complicado a nivel técnicoy hay que hacerlo con cuidado.
+
+- La tercera opción es no instalar Linux y utilizar alguna terminal disponible en vuestro sistema operativo. Los ordenadores Mac traen por defecto una terminal muy similar a la de Linux. En Windows, podéis instalar Windows Subsystem for Linux (WSL) o MinGW para tener una terminal como la de Linux. Esta opción es también sencilla, pero es un poco más limitada.
+
+Nosotros vamos a explicar cómo instalar Linux en una máquina virtual. Para ello, hemos escrito una guía detallada del proceso que adjuntamos en este correo. Además, el martes 23 a las 17:00 realizaremos un taller para resolver las dudas y problemas que hayan podido surgir durante la instalación. Para instalar la máquina virtual necesitaréis unos ~15GB de espacio disponible en el disco duro.
+
+Si alguien quiere utilizar alguna de las opciones alternativas, es libre de hacerlo a su cuenta y riesgo.
