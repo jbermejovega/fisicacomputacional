@@ -1,0 +1,11 @@
+Esta lección describe herramientas de Software Científico para programadores Python. Estos materiales han sido elaborados por el profesor de la UGR Pedro González Rodelas en un taller impartido por el mismo en la conferencia PyCon 2022. 
+
+Las herramientas se describen notebook alojados en el siguiente repositorio de Github:   https://github.com/prodelas/PyConES2022.git
+
+Para poder abrirlos y ejecutar los ejemplos allí incluidos deberíais tener instalado en vuestro portátil:
+
+- Python y Jupyter Notebook, aparte de los módulos fundamentales con los que se va a trabajar: SymPy, NumPy, Matplotlib, SciPy y Pandas. 
+
+Se pueden instalar a mano o mediante distribuciones de Python prediseñadas como Anaconda (https://www.anaconda.com/ de la compañía Continuum Analytics), que es una de las distribuciones más usadas y fáciles de manejar. 
+
+PD: Para los no iniciados, se podría seguir las instrucciones indicadas en el siguiente post de un Taller previo de software libre celebrado en Granada y promovido por la Oficina de Software Libre de la UGR:  https://www.ugr.es/~prodelas/ftp/TallerPython.html
