@@ -1,6 +1,9 @@
 # Prerequisites
 *.d
 
+#vscode
+
+
 # COMENTARIO 
 # OTRO COMENTARIOoooOOoo
 
@@ -8,7 +11,9 @@
 
 # OTRO COMENTARIO
 
-.extensionimagafafa
+.extensionimaganaria
+
+
 
 # Object files
 *.o
@@ -59,3 +64,4 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+.vscode/tasks.json
