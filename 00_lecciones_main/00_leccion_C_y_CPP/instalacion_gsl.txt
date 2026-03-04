@@ -1,0 +1,10 @@
+Pasos para instalar y usar la GNU Scientific Library (GSL)
+
+INSTALACIÓN
+En Linux es muy sencillo, simplemente ejecutamos el comando:
+    sudo apt-get install libgsl-dev
+
+USO
+Para usar los generadores de números aleatorios de la GSL, tenemos que
+importar la librerías gsl/gsl_rng y gsl/gsl_
+
