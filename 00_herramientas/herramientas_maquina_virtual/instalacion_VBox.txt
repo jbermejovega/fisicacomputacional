@@ -1,0 +1,69 @@
+- Descargamos el archivo (windows o mac)
+- Ejecutamos
+- Le damos a next en la 1a ventana
+- En el siguiente hay varias opciones pero tampoco tocamos nada -> Next
+- En la siguiente da la opción de generar o no iconos en el escritorio/menu, lo que quiera cada uno y Next
+- En la siguiente, nos dicen que la instalación de VBox networks va a reiniciar la conexión: esto implica una caída de la videollamada. Avisamos y Next
+- Finalmente, le damos a Install
+- Puede salir en medio que si queremos instalar algo de USB (esto se me ha escapado de las capturas de pantalla). Lo instalamos
+- Finalmente nos dice que tenemos que reiniciar, pero probamos a saltarnoslo
+
+Instalar Guest Additions (ref: https://www.virtualbox.org/manual/ch04.html)
+- Hay que hacerlo al final
+
+Instalar Linux en la máquina (ref: https://itsfoss.com/install-linux-in-virtualbox/)
+
+1. CREAR MÁQUINA VIRTUAL (como un ordenador vacío dentro de tu ordenador)
+Ahora abrimos VBox y le damos a "Nueva" (ojo, NO a "añadir")
+- Ponemos el nombre, y elegimos "Linux" y "Ubuntu 64bits"
+- Elegimos la cantidad de Memoria RAM. Esta se va a compartir entre el "Host" y el "Guest": hay que darle todo lo posible sin dejar al Host sin recursos.
+- Crear disco duro virtual
+- Tipo por defecto: VDI
+- Asignación dinámica
+- Tamaño: he probado con 5GB
+
+2. INSTALACIÓN DEL SISTEMA OPERATIVO (el "ordenador virtual" está vacío, hay que instalar un SO, Linux)
+- Sale ahora el menú de VBox. Seleccionamos la máquina que hemos creado y le damos a iniciar.
+	* A mí me ha dado un error: decía algo de que no se podían cargar los "kernel modules". He vuelto a ejecutar el instalador, le he dado a "Repair" y se ha arreglado.
+
+- Ahora se abre la máquina virtual y pide un disco de arranque (la ISO de Linux). Hay que darle al botón a la derecha de "Vacío".
+- Se abre el "Selector de disco óptico". Le damos a añadir y buscamos la ISO de Linux. (Esto es como meter un CD en nuestro ordenador virtual)
+- Ahora empieza a arrancar Linux Mint (yuhuuu)
+	* Aqui hay que mirar cómo hacer para que la máquina virtual no capture el ratón
+- Sale ya el escritorio.
+	* Está en inglés pero se cambia luego
+	* ¡Ojo! Aún no está instalado
+- Las dimensiones de la pantalla de la VBox son incómodas.
+	* Ajustamos las opciones en "Ver"
+	* Lo suyo es poner el "Modo fluido" o "Seamless mode", pero aún no está instalado Guest Additions. Pueden reducir la resolución en las opciones de Linux (Start Menu -> Display)
+	* Si alguien le da a Modo Ajustado, con "Ctrl (derecho) + C" se sale
+	* Le damos a Install Linux Mint en el escritorio
+
+	
+
+(...)
+
+	* Completamos la instalación y sacamos el disco (parece que sale solo? -> SÍ)
+	* Reiniciamos y configuramos el gestor de actualizaciones
+	* Desactivar Timeshift
+	* ¿Cambiar a servidores locales?
+	* Instalar actualizaciones
+	* Comprobar espacio
+
+Preguntas: ¿cómo intercambio archivos?
+
+
+Guest additions: (ref: https://www.linuxito.com/cloud/1094-como-instalar-las-guest-additions-de-virtualbox-en-un-guest-linux)
+
+- Insertar CD Guest
+- Ejecutar desde la terminal como root
+- Esperar
+- Extraer el CD
+- Añadir el usuario al grupo vboxsf "sudo usermod -aG vboxsf $(whoami)"
+- Apagar
+- Crear carpeta compartida desde Aplicación VBox
+- Elegir localización y marcar automontar
+- Encender y ver que se redimensiona auto y que tienen la carpeta compartida.
+- Hay que instalar build-essential (ahora o más adelante)
+
+Decir que no tienen que apagarlo
