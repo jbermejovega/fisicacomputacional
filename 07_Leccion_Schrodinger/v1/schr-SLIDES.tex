@@ -1,0 +1,633 @@
+\documentclass[12pt]{iopart}
+%\documentclass[aps,rmp,superscriptaddress,showpacs,twocolumn,longbibliography]{revtex4-1}
+%\documentclass[entropy,review,submit,moreauthors,pdftex,10pt,a4paper]{mdpi} 
+
+
+%Packages
+\usepackage{iopams}  
+\expandafter\let\csname equation*\endcsname\relax
+\expandafter\let\csname endequation*\endcsname\relax
+
+%% For landscape geometry
+%\usepackage[landscape]{geometry}
+
+% For landscape geometry
+\usepackage[a4paper,margin=0.75in,landscape]{geometry}
+\usepackage[fontsize=16pt]{scrextend}
+
+\usepackage{bm}				% bold math symbols
+%%\usepackage{bbm}		    % double stroked symbols
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{latexsym}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{dsfont}
+
+\usepackage{color}
+\definecolor{myblue}{RGB}{65,105,225}
+\definecolor{mygreen}{RGB}{34,139,34}
+\definecolor{myorange}{RGB}{255,69,0}
+\usepackage[colorlinks,linkcolor=myorange,urlcolor=myblue,citecolor=myblue]{hyperref}
+
+% The following packages are used to write FORTRAN code in the text
+\usepackage[T1]{fontenc}
+\usepackage{xcolor}
+\usepackage{lmodern}
+\usepackage{listings}
+\lstset{language=[90]Fortran,
+  basicstyle=\ttfamily,
+  keywordstyle=\color{orange},
+  commentstyle=\color{gray},
+  morecomment=[l]{!\ }% Comment only with space after !
+}
+
+% Package to add frames: use \begin{mdframed} ... \end{mdframed}
+\usepackage{mdframed}
+
+\usepackage[spanish,activeacute]{babel}
+\usepackage[]{floatflt}
+\usepackage{epsfig}
+\usepackage{wrapfig}
+%\usepackage{html}
+
+%\def\az{\textcolor{myblue}}
+%\def\ro{\textcolor{myorange}}
+\def\az{\textcolor{blue}}
+\def\ro{\textcolor{red}}
+
+\newcommand{\cA}{{\cal A}}
+\newcommand{\w}{\omega}
+\newcommand{\W}{\Omega}
+\newcommand{\hx}{\hat{\bf x}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\fx}{f_{\hx}}
+\newcommand{\Fx}{F_{\hx}}
+\newcommand{\hG}{\hat{\bf G}}
+\newcommand{\hH}{\hat{\bf H}}
+\newcommand{\hy}{\hat{\bf y}}
+\newcommand{\hB}{\hat{\bf B}}
+\newcommand{\hNB}{\hat{\bf N}_{B}}
+\newcommand{\hNG}{\hat{\bf N}_{G}}
+\newcommand{\hU}{\hat{\bf U}}
+\newcommand{\hu}{\hat{\bf u}}
+\newcommand{\hP}{\hat{\bf P}}
+\newcommand{\hchi}{\hat{\mathbf{\chi}}}
+\newcommand{\htt}{\hat{\bf t}}
+\newcommand{\fy}{f_{\hy}}
+\newcommand{\Fy}{F_{\hy}}
+\newcommand{\hZ}{\hat{\bf Z}_n}
+\newcommand{\fZ}{f_{\hZ}}
+\newcommand{\hS}{\hat{\bf S}_n}
+\newcommand{\hV}{\hat{\bm{\sigma}}_n}
+\newcommand{\fxy}{f_{\hx\hy}}
+\newcommand{\Fxy}{F_{\hx\hy}}
+\newcommand{\hp}{\hat{\bf p}}
+\newcommand{\hI}{\hat{\bf I}_1}
+\newcommand{\hmM}{\hat{\bm \mu}_M}
+\newcommand{\hsM}{\hat{\bm \sigma}_M}
+\newcommand{\fxB}{f_{\hx,\hB}}
+
+% New commands
+%% Quantum mechanics notation
+\newcommand{\ket}[1]{\vert{#1}\rangle} 
+\newcommand{\bra}[1]{\langle{#1}\vert} 
+\newcommand{\bracket}[2]{\langle{#1}\vert{#2}\rangle} 
+% For operator Hilbert space
+\newcommand{\kket}[1]{\vert{#1}\rangle\rangle} 
+\newcommand{\bbra}[1]{\langle\langle{#1}\vert} 
+\newcommand{\bbraket}[2]{\langle\langle{#1}\vert{#2}\rangle\rangle} 
+% projector onto a state
+\newcommand{\proj}[1]{\ket{#1}\!\bra{#1}}
+%operator
+\newcommand{\op}[2]{\ket{#1}\!\bra{#2}}
+% expectation value
+\newcommand{\mean}[1]{\langle #1 \rangle}
+%identity
+\newcommand{\one}{\openone}
+% Trace operator
+%\newcommand{\Tr}{Tr}
+\newcommand{\cov}{cov}
+%\DeclareMathOperator{\Tr}{Tr}
+%\DeclareMathOperator{\cov}{cov}
+%Fock-Liouville space
+\newcommand{\opfl}[1] {\vert \vert #1 \rangle}
+
+% general mathematical notation
+\newcommand{\abs}[1]{\left|#1\right|} 
+\newcommand{\pare}[1]{\left( #1 \right)}
+\newcommand{\be}{\begin{equation}}
+\newcommand{\ee}{\end{equation}}
+\newcommand{\key}[1]{\left\{ #1 \right\}}
+\newcommand{\cor}[1]{\left[ #1 \right]}
+\newcommand{\acor}[1]{\left\{ #1 \right\}}
+\newcommand{\la}{\langle}
+\newcommand{\ra}{\rangle}
+\newcommand{\bc}{\begin{center}}
+\newcommand{\ec}{\end{center}}
+
+%% Shortcuts
+\newcommand{\ben}{\begin{eqnarray}}
+\newcommand{\een}{\end{eqnarray}}
+\newcommand{\up}{\uparrow}
+\newcommand{\down}{\downarrow}
+
+% Unitary operator U eigenvectors
+\newcommand{\kpa}{\ket{\psi_\alpha}}
+\newcommand{\kpb}{\ket{\psi_\beta}}
+
+\renewcommand{\vec}[1]{\boldsymbol{#1}}
+\renewcommand*{\Re}{\operatorname{Re}}
+
+%Corrections
+\newcommand{\blue}[1]{{\color{blue} #1}}
+
+%Caligraphic Letters
+\newcommand{\cHt}{{\cal H}_T}
+\newcommand{\cH}{{\cal H}}
+\newcommand{\cHe}{{\cal H}_E}
+\newcommand{\cL}{{\cal L}}
+\newcommand{\cS}{{\cal S}}
+\newcommand{\cU}{{\cal U}}
+\newcommand{\cW}{{\cal W}}
+
+% Operators in the interaction picture: tilde notation
+\newcommand{\tO}{\tilde{O}}
+\newcommand{\trhoT}{\tilde{\rho}_T}
+\newcommand{\trho}{\tilde{\rho}}
+\newcommand{\tV}{\tilde{V}}
+\newcommand{\tE}{\tilde{E}}
+
+%Adjoint spaces
+\newcommand{\cB}{{\cal B}}
+\newcommand{\cBH}{{\cal B}({\cal H})}
+\newcommand{\cBHt}{{\cal B}({\cal H}_T)}
+\newcommand{\cBHe}{{\cal B}({\cal H}_E)}
+\newcommand{\cBBHt}{{\cal B}({\cal B}({\cal H}_T))}
+\newcommand{\cBBH}{{\cal B}({\cal B}({\cal H}))}
+\newcommand{\cBa}{\cB_{\alpha\beta}}
+\newcommand{\cBaa}{\cB_{\alpha\alpha}}
+\newcommand{\rhoa}{\rho_{\alpha\beta}}
+\newcommand{\rhoaa}{\rho_{\alpha}}
+\newcommand{\id}{\mathds{1}}
+\newcommand{\ide}{\mathds{1}_E}
+
+%Text
+\newcommand{\PP}{\textrm{P}}
+\newcommand{\ii}{\textrm{i}}
+\newcommand{\te}[1]{\textrm{#1}}
+
+%Superoperators
+\newcommand{\cLl}{{\cal L}_{\lambda}}
+
+%Spectrum
+\newcommand{\oa}{\omega_{\alpha\beta\nu}(\lambda)}
+\newcommand{\loa}{\hat{\omega}_{\alpha\beta\nu}(\lambda)}
+%\newcommand{\oa}{\psi_{\alpha\beta\nu}(\lambda)}
+%\newcommand{\loa}{\tilde{\psi}_{\alpha\beta\nu}(\lambda)}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+\title{\textcolor{gray}{F{\'\i}sica Computacional} \\ Resoluci{\'o}n de ecuaciones en derivadas parciales: la ecuaci{\'o}n de Schr\"odinger}
+
+
+%\vspace{1.5cm}
+%\hspace{0.5cm} \noindent Departamento de Electromagnetismo y F\'{\i}sica de la Materia 
+%
+%\hspace{0.5cm} Instituto Carlos I de F{\'\i}sica Te{\'o}rica y Computacional 
+%
+%\hspace{0.5cm} Universidad de Granada. E-18071 Granada. Spain
+
+%\begin{abstract}
+%These notes correspond to the first part (20 hours) of a course on Computational Methods in Nonlinear Physics within the Master on Physics and Mathematics (\emph{FisyMat}) of University of Granada. In this second chapter we describe the use of random numbers and Monte Carlo methods to perform integrals, and the adecuacy of this method for high-dimensional problems.
+%\end{abstract}
+%
+%\vspace{2pc}
+%\noindent{\it Keywords}: Computational physics, probability and statistics, Monte Carlo methods, stochastic differential equations, Langevin equation, Fokker-Planck equation, molecular dynamics.
+%
+%%\vspace{4cm}
+%
+%\section*{References and sources}
+%\begin{thebibliography}{10}
+%
+%\bibitem{toral} R. Toral and P. Collet, \emph{Stochastic Numerical Methods}, Wiley (2014).
+%
+%%\bibitem{wiki} Wikipedia: https://en.wikipedia.org
+%
+%\end{thebibliography}
+
+
+\newpage
+
+%\tableofcontents
+%
+%\newpage
+
+
+%\begin{figure}
+%\centerline{\includegraphics[width=12cm]{}}
+%\caption{}
+%\label{fig1}
+%\end{figure}
+
+
+
+\section{Fundamento Te\'orico}
+
+\begin{itemize}
+
+\item En \ro{Mec\'anica cu\'antica}, el estado f\'{\i}sico de un sistema unidimensional de una part\'{\i}cula viene
+descrito completamente por una \az{funci\'on de onda compleja $\Phi(x,t)$} que obedece la denominada \az{ecuaci\'on 
+de Schr\"odinger}
+%
+\begin{equation}
+\label{sch}
+i\hbar \frac{\partial \Phi(x,t)}{\partial t} =
+\left[ -\frac{\hbar^2}{2m}  \frac{\partial^2}{\partial x^2} + V(x) \right] \Phi(x,t)= H\Phi
+\end{equation}
+%
+donde $V(x)$ es el potencial al que est\'a sometida la part\'{\i}cula, 
+que supondremos que tiene una masa $m$ independiente del tiempo, $\hbar$  es la constante
+de Planck reducida y \az{$H$ es el operador Hamiltoniano, que es herm\'{\i}tico}.
+
+\item La \ro{densidad de probabilidad} de encontrar a la part\'{\i}cula en un volumen $dV$ alrededor del 
+punto $x$ y en el instante $t$ es 
+%
+\begin{equation}
+dP=|\Phi(x,t)|^2 dV.
+\end{equation}
+%
+
+\item \ro{Normalizaci'on}: Para un sistema compuesto \'unicamente por una part\'{\i}cula, como es el nuestro, la
+probabilidad total de encontrar la part\'{\i}cula en alg\'un punto del espacio,
+en cualquier instante $t$, es igual la unidad,
+%
+\begin{equation}
+\label{3}
+\int_V |\Phi(x,t)|^2 dV=1.
+\end{equation}
+%
+
+\item N\'otese que \az{la integral de probabilidad es constante durante la evoluci\'on
+temporal}, lo que habr\'a que tenerse en cuenta al plantear la resoluci\'on
+num\'erica del problema.
+
+\item Podemos observar que \az{la ecuaci\'on de Schr\"odinger es lineal} y
+que se trata de una \az{ecuaci\'on diferencial de primer orden en el tiempo}.
+
+\item Para evitar el uso continuado de $m$ y $\hbar$, haremos el \ro{cambio de variable} $t\rightarrow t\hbar$
+en el tiempo  y $x\rightarrow x \hbar/\sqrt{2m}$ en 
+el espacio, lo que conduce a una ecuaci{\'o}n equivalente a (\ref{sch}) pero en la que $\hbar=1$ y
+$m=1/2$:
+%
+\begin{equation}
+\label{7}
+-H\Phi\equiv \left[ \frac{\partial^2}{\partial x^2}- V(x) \right]\Phi(x,t) =
+-i\frac{\partial \Phi}{\partial t}.
+\end{equation}
+
+\item Esta ecuaci\'on \az{puede resolverse t\'erminos de las autofunciones del hamiltoniano $H$}, 
+que, recordemos, es independiente del tiempo. 
+
+\item Llamando $u_n$ a los estados acotados y 
+$u_k$ a los estados del continuo, entonces la \ro{soluci\'on dependiente del tiempo} viene
+dada de forma rigurosa por 
+%
+\begin{equation}
+\Phi(x,t)=\sum_n a_n e^{-iE_n t} u_n(x) + \int dk a(k) e^{-iE(k)t} u_k(x),
+\end{equation} 
+con
+\begin{equation}
+a_n=\langle u_n,\phi(x,0)\rangle, \qquad a(k)=\langle u_k,\phi(x,0)\rangle,
+\end{equation}
+%
+donde \az{$\Phi(x,0)$ es el estado inicial} del sistema (y por lo tanto $a_n$ y
+$a(k)$ son los coeficientes $\Phi$ en las bases $\{u_n\}$ y $\{u_k\}$, respectivamente). 
+
+\item De seguir este procedimiento, topar\'iamos con los \ro{inconvenientes} de que:
+\begin{itemize}
+\item En la mayor\'{\i}a de los casos, \az{las autofunciones y los autovalores del hamiltoniano no se pueden calcular
+anal\'{\i}ticamente} y han de determinarse num\'ericamente.
+
+\item Por motivos num\'ericos, \az{el estado inicial debe restringirse necesariamente a una combinaci\'on lineal
+{\em finita} de autofunciones} y, en cualquier caso, el n\'umero de \'estas debe ser el menor 
+posible para reducir el trabajo computacional. Truncar la base tiene como inconveniente a\~nadido
+que \az{la evoluci\'on deja de ser unitaria}.
+\end{itemize}
+
+\item Por todo ello, en lugar de seguir el procedimiento anterior \ro{integrararemos directamente la ecuaci\'on (\ref{7})}.
+Pero \az{hay que ser muy cuidadosos} con el m\'etodo num\'erico porque, en general, \az{la discretizaci\'on provoca que no
+se conserve la normalizaci\'on} de la funci\'on de onda (ecuaci\'on \ref{3}).
+
+\item La \ro{soluci{\'o}n formal de la ecuaci{\'o}n de Schr\"odinger} es
+%
+\begin{equation}
+\label{evol0}
+\Phi(x,t)=e^{-i(t-t_0)H} \Phi(x,t_0)
+\end{equation}
+%
+donde el operador \az{$e^{-itH}$ es unitario (su inverso coindice con su adjunto) por ser $H$ herm{\'\i}tico}. Esta {\'u}ltima
+propiedad ser{\'a} de utilidad  a la hora de hallar la discretizaci{\'o}n m{\'a}s adecuada para resolver el problema
+num\'ericamente como veremos a continuaci\'on.
+
+\end{itemize}
+
+
+
+
+
+
+
+\section{M{\'e}todo num{\'e}rico}
+
+\begin{itemize}
+
+\item \ro{Discretizaremos el espacio y el tiempo} tomando
+$x_j=jh$ y $t_n=ns$, con $j=0,1,...,N$ y  $n=0,1,2,...$,
+donde  \az{$h$ es el espaciado en la discretizaci\'on espacial y $s$ es el
+espaciado temporal}. 
+
+\item La \az{funci\'on de onda} viene dada en cada punto del
+ret\'{\i}culo espacio-temporal por:
+\begin{equation}
+\Phi(x_j,t_n)\rightarrow\Phi(jh,ns)=\Phi_{j,n}\quad\quad \text{con}\quad
+j=0,1,...,N \quad \text{y} \quad  n=0,1,2,... .
+\end{equation}
+
+\item Supondremos que las \ro{condiciones de contorno} para la funci{\'o}n de onda en $j=0$ y $j=N$ son las correspondientes
+a la existencia de un \az{potencial infinito en esos puntos}, esto es, la densidad
+de  probabilidad de encontrar la part{\'\i}cula en dichos puntos es cero.
+As\'{\i}, \az{$\Phi_{0,n}=\Phi_{N,n}=0$, en cualquier instante}. 
+
+\item Puede definirse de forma inmediata un \az{primer algoritmo} a partir de la expresi{\'o}n 
+%
+\begin{equation}
+\Phi_{j,n+1}= e^{-i s H}\Phi_{j,n}.
+\end{equation}
+%
+Si $s$ es muy peque{\~n}o, el operador de evoluci{\'o}n $\exp{(-isH)}$ 
+puede aproximarse por su \az{desarrollo de Taylor a primer orden} en $t$. Si adem{\'a}s observamos
+que el operador Hamiltoniano no es m{\'a}s que la aplicaci{\'o}n de una derivada segunda, su \az{discretizaci{\'o}n espacial} es
+obvia y en total obtenemos el siguiente algoritmo
+%
+\begin{equation}
+\Phi_{j,n+1}=\left(1-isH_D+O(sH_D)^2\right)\Phi_{j,n},
+\end{equation}
+%
+donde 
+%
+\begin{equation}
+\Phi_j^{\prime\prime}\equiv \frac{\partial^2 \Phi}{\partial x^2}=\frac{1}{h^2}(\Phi_{j+1}-2\Phi_j+\Phi_{j-1})+O(h^2)
+\end{equation}
+%
+y \az{$H_D$ viene dado por}
+%
+\begin{equation}
+H_D f_j=- \frac{1}{h^2}(f_{j+1}-2f_j+f_{j-1})+V_jf_j
+\end{equation}
+%
+con $V_j=V(jh)$. 
+
+\item Este algoritmo tan simple y natural adolece de un \az{grave problema}: \ro{el operador 
+$(1-isH)$ {\bf no es unitario}}. Esto implica que durante la iteraci{\'o}n del algoritmo para encontrar la evoluci{\'o}n de la 
+funci{\'o}n de onda,  \az{la normalizaci{\'o}n, $\sum_j h \vert\Phi_{j,n}\vert^2$, ir{\'a} variando con el tiempo}, lo que es incompatible
+con la restricci\'on de normalizaci\'on a la unidad expresada en (\ref{3}) y \az{viola la interpretaci\'on de Born}.
+
+\item As\'{\i} pues, \az{el objetivo ser{\'a} encontrar un operador evoluci{\'o}n similar al anterior pero que sea exactamente unitario}. Esto
+se  consigue haciendo uso de la \ro{aproximaci\'on de Cayley} para el operador evoluci\'on temporal
+%
+\begin{equation}
+e^{-isH}\approx \frac{1-isH_D/2}{1+isH_D/2},
+\end{equation}
+%
+que conduce  al  \ro{algoritmo}
+%
+\begin{equation}
+\Phi_{j,n+1}=\frac{1-isH_D/2}{1+isH_D/2}\Phi_{j,n}.
+\end{equation}
+%
+
+\item N\'otese que \az{adem{\'a}s de ser unitario, este operador es exacto hasta orden $(sH_D)^2$}.
+
+\item Para completar el algoritmo, s\'olo resta dise{\~n}ar la \az{estrategia para  utilizar eficazmente el operador $1/(1+isH_D)$}.
+Para ello \az{reescribimos la anterior ecuaci{\'o}n} como
+%
+\begin{equation}
+\label{evol}
+\Phi_{j,n+1}=\left[ \frac{2}{1+isH_D/2} -1 \right]\Phi_{j,n}=\chi_{j,n}-\Phi_{j,n},
+\end{equation}
+%
+donde
+%
+\begin{equation}
+\chi_{j,n}\equiv \frac{2}{1+isH_D/2}\Phi_{j,n},
+\end{equation}
+%
+o lo que es lo mismo, dada $\Phi_{j,n}$, $j=0,..,N$, $\chi_{j,n}$ es la soluci{\'o}n de la ecuaci{\'o}n
+%
+\begin{equation}
+\left[ 1+isH_D/2  \right]\chi_{j,n}=2\Phi_{j,n},
+\end{equation}
+%
+que en forma expl{\'\i}cita puede escribirse como
+%
+\begin{equation}
+\chi_{j+1,n}+\left[-2+\frac{2i}{\tilde s}-\tilde V_j \right]\chi_{j,n}+\chi_{j-1,n}=\frac{4i}{\tilde s}\Phi_{j,n}
+\label{kappa}
+\end{equation}
+%
+donde $\tilde s=s/h^2$ y $\tilde V_j=h^2V_j$.
+
+\item De esta forma, \ro{el algoritmo de evoluci{\'o}n es claro}: \az{dada una funci{\'o}n de onda en el instante $n$ para
+toda posici{\'o}n $j$ se resuelve el conjunto de ecuaciones (\ref{kappa}) y se obtiene $\chi_{j,n}$ ($j=0,..,N$)}. Con esta 
+soluci{\'o}n
+se recurre a la ecuaci{\'o}n (\ref{evol}) para \az{obtener las nuevas $\Phi_{j,n+1}$ ($j=0,...,N$),} iter\'andose el proceso.
+
+\item S\'olo falta por conocer c\'omo resolver ecuaciones del tipo (\ref{kappa}), es decir, \az{c\'omo invertir 
+matrices tridiagonales}.
+
+\item En este caso, hemos de resolver un \az{conjunto de ecuaciones} del tipo
+%
+\begin{equation}
+A_j^{-}\chi_{j-1,n}+A_j^0\chi_{j,n}+A_j^+\chi_{j+1,n}=b_{j,n} \quad j=1,\ldots ,N-1
+\label{recu}
+\end{equation}
+%
+donde $A_j^-=1$, $A_j^0=-2+2i/\tilde s-\tilde V_j$, $A_j^+=1$ y $b_{j,n}=4i\Phi_{j,n}/\tilde s$.
+
+\item \ro{Las condiciones de contorno son $\chi_0=\chi_{N}=0$} (notemos que estas condiciones de contorno implican que en (\ref{evol})
+ $\Phi_{0}$ y $\Phi_{N}$ son nulas en cualquier instante).
+
+\item Para resolver la recurrencia (\ref{recu}) \az{suponemos que su soluci{\'o}n es del tipo}
+%
+\begin{equation}
+\chi_{j+1,n}=\alpha_{j}\chi_{j,n}+\beta_{j,n}\quad j=0,\ldots,N-1
+\label{sol1}
+\end{equation}
+%
+donde, \az{para garantizar que se cumple $\chi_{N,n}=0$, tomaremos  $\alpha_{N-1}=\beta_{N-1,n}=0$}. 
+
+\item \az{Sustituyendo} esta expresi{\'o}n en (\ref{recu}) obtenemos
+%
+\begin{equation}
+\chi_{j,n}=-\frac{A_j^-}{A_j^0+A_j^+\alpha_j}\chi_{j-1}+\frac{b_{j,n}-A_j^+\beta_{j,n}}{A_j^0+A_j^+\alpha_j}.
+\label{sol2}
+\end{equation}
+%
+
+\item Si identificamos las ecuaciones (\ref{sol1}) y (\ref{sol2}) podemos definir las \az{recurrencias para los coeficientes $\alpha$ y
+$\beta$} as\'{\i}
+%
+\begin{equation}
+\alpha_ {j-1}=-A_j ^-\gamma_j, \qquad
+\beta_{j-1,n}=\gamma_j\left(b_{j,n}-A_j^+\beta_{j,n}  \right).
+\label{beta}
+\end{equation}
+%
+donde $\gamma_j^{-1}=A_j^0+A_j^+\alpha_j$. 
+
+\item Estas ecuaciones nos dan la \az{forma de obtener todas las $\alpha$ y $\beta$
+partiendo de $j=N-1$ y obteniendo en orden decreciente $\alpha_{j}$ y
+$\beta_{j,n}$ con  $j=N-2, \ldots,1,0$}. 
+
+\item Obs\'ervese que \az{$\alpha$ no depende del tiempo} y s\'olo es necesario calcularlas una vez.
+
+\item Una vez obtenidas las $\alpha$ y $\beta$, se usa la recurrencia (\ref{sol1}) para \az{hallar las $\chi_j$ en orden de $j$
+crecientes}.
+
+\item Conocida  $\chi_{j,n}$, y con ella $\Phi_{j,n+1}$, queda discutir qu\'e \ro{funci{\'o}n de onda inicial} se usa 
+y con qu\'e potencial. La funci{\'o}n de onda inicial que vamos a usar es una \az{onda plana con una amplitud gaussiana}, esto es,
+%
+\begin{equation}
+\Phi(x,0)=e^{ik_0x}e^{-(x-x_0)^2/2\sigma^2}.
+\end{equation}
+%
+Notemos que con esta elecci{\'o}n, la densidad de  probabilidad de encontrar inicialmente la part{\'\i}cula en un punto $x$ es
+una gaussiana centrada en $x_0$ y de anchura $\sigma$. 
+
+\item El \az{n{\'u}mero de oscilaciones completas que la funci{\'o}n de onda} tiene
+sobre la red depende de $k_0$. En particular, $k_0Nh=2\pi n_{ciclos}$. En lugar de dar como par{\'a}metro inicial $k_0$, daremos
+\ro{$n_{ciclos}$}. 
+
+\item Obviamente $n_{ciclos}=0,1,....,N$. Pero f{\'\i}sicamente no tendr{\'\i}a mucho sentido que se produjese una 
+oscilaci{\'o}n completa de la funci{\'o}n de onda  entre dos puntos del ret{\'\i}culo, pues querr{\'\i}a decir que la
+discretizaci\'on no es suficientemente fina. As\'{\i} pues, \ro{restringiremos el par{\'a}metro $n_{ciclos}$ a los valores 
+$1,...,N/4$}. \az{De esta forma, un ciclo tendr\'a 4 puntos como m{\'\i}nimo}. 
+
+\item La posici{\'o}n media inicial y la anchura de
+la gaussiana ser\'an por ejemplo $x_0=Nh/4$ y  $\sigma=Nh/16$, aunque es recomendable \az{escribir la funci\'on de 
+onda inicial de manera gen\'erica y jugar con $x_0$ y $\sigma$}.
+ 
+\item Por {\'u}ltimo, \az{el potencial que usaremos} tendr\'a una anchura $N/5$, estar\'a entrado en $N/2$ y su altura ser\'a proporcional a 
+la energ{\'\i}a de la funci{\'o}n de onda incidente: $\lambda k_0^2$ (puede usarse, por ejemplo, $\lambda=0.3$).
+
+\item \az{En resumen}, utilizando las constantes reescaladas, la funci{\'o}n de onda en el ret{\'\i}culo se tomar{\'a}
+%
+\begin{equation}
+\Phi_{j,0}=e^{i\tilde k_0 j} e^{-8(4j-N)^2/N^2},
+\end{equation}
+%
+donde $\tilde k_0=k_0 h=2\pi n_{ciclos}/N$ donde $n_{ciclos}=1,...,N/4$. 
+
+\item El \az{potencial} es
+\begin{equation}
+\tilde V_j =V_j h^2=
+\begin{cases}
+0  & \text{si  $j\not\in [2N/5,3N/5]$},  \cr
+\lambda\tilde k_0^2 &  \text{si $j\in  [2N/5,3N/5]$}.
+\end{cases}
+\end{equation}
+\vspace{0.2cm}
+
+\item S\'olo queda por fijar el \ro{par{\'a}metro $\tilde s=s/h^2$}. Puesto que la energ{\'\i}a es proporcional a $k_0^2$
+y el operador din{\'a}mico discreto tiende a ser exacto en potencias de $H s$, \az{lo {\'o}ptimo es elegir
+$||H||s<1$, esto es, $k_0^2 s<1$}. As\'{\i} deducimos que $\tilde s < 1/\tilde k_0^2$. En particular \ro{tomaremos $\tilde s=1/4\tilde
+k_0^2$}.
+
+\item Resumiendo, \ro{los par{\'a}metro que se han de fijar inicialmente son $N$, $n_{ciclos}$ y $\lambda$}, pues todos
+los dem{\'a}s se determinan a partir de ellos. 
+
+\item Por lo tanto, el \ro{algoritmo para resolver la ecuaci{\'o}n de Schr\"odinger unidimensional} puede esquematizarse del siguiente modo:
+%
+\begin{enumerate}
+\item Dar los par{\'a}metros iniciales: $N$, $n_{ciclos}$ y $\lambda$. Generar $\tilde s$, $\tilde k_0$, $\tilde V_j$,
+$\Phi_{j,0}$ (incluyendo las condiciones de contorno $\Phi_{0,0}=\Phi_{N,0}=0$) y $\alpha$.
+\item Calcular $\beta$ utilizando la recurrencia (\ref{beta}).
+\item Calcular $\chi$ a partir de (\ref{sol1}).
+\item Calcular $\Phi_{j,n+1}$ de (\ref{evol}).
+\item $n=n+1$, ir a al paso 2.
+\end{enumerate}
+
+\end{itemize}
+
+
+%\begin{figure}
+%\hspace{5cm}\includegraphics[width=8.07cm]{goldberg1.jpg}
+%\includegraphics[width=8cm]{goldberg2.jpg}
+%\caption{Dispersi\'on de un paquete gaussiano por un pozo cuadrado. La energ\'ia
+%  media es la mitad (izquierda) o igual (derecha) a la profundidad del pozo. Los n\'umeros
+%  denotan el tiempo de cada configuraci\'on en unidades arbitrarias.}
+%\end{figure}
+
+%\begin{figure}
+%\includegraphics[width=8cm]{goldberg2.jpg}
+%\caption{Dispersi\'on de un paquete gaussiano por un pozo cuadrado. La energ\'ia
+%  promedio es igual a la profundidad del pozo. Los n\'umeros
+%  denotan el tiempo de cada configuraci\'on en unidades arbitrarias.}
+%\end{figure}
+
+%\begin{figure}
+%\bc
+%\hspace{1cm}\includegraphics[width=8.35cm]{goldberg3.jpg}
+%\includegraphics[width=8cm]{goldberg4.jpg}
+%\includegraphics[width=8.07cm]{goldberg5.jpg}
+%\ec
+%\caption{Dispersi\'on de un paquete gaussiano por una barrera cuadrada. La
+ % energ\'ia promedio es  la mitad (izquierda), igual (centro) o el doble (derecha) de la altura de la barrera. Los n\'umeros
+%  denotan el tiempo de cada configuraci\'on en unidades arbitrarias.}
+%\end{figure}
+
+%\begin{figure}
+%\includegraphics[width=8cm]{goldberg4.jpg}
+%\caption{Dispersi\'on de un paquete gaussiano por una barrera cuadrada. La
+%  energ\'ia promedio es igual a la altura de la barrera. Los n\'umeros
+%  denotan el tiempo de cada configuraci\'on en unidades arbitrarias.}
+%\end{figure}
+%
+%\begin{figure}
+%\includegraphics[width=8cm]{goldberg5.jpg}
+%\caption{Dispersi\'on de un paquete gaussiano por un pozo cuadrado. La energ\'ia
+%  promedio es dos veces la altura de la barrera. Los n\'umeros
+%  denotan el tiempo de cada configuraci\'on en unidades arbitrarias.}
+%\end{figure}
+
+\section{Problemas}
+\begin{itemize}
+\item{\ro{\it Obligatorio:}} Resolver la ecuaci{\'o}n de Schr\"odinger unidimensional para un potencial cuadrado.
+
+\item{\ro{\it Voluntario 1:}} Estudiar el \az{coeficiente de transmisi{\'o}n} (la probabilidad de encontrar a la part{\'\i}cula al
+otro lado del obst{\'a}culo para tiempos largos pero antes de que se refleje en la pared derecha) en funci{\'o}n
+del par{\'a}metro del potencial $\lambda$, para valores positivos y negativos. Estudiar la dependencia en $N$ del coeficiente de transmision realizando simulaciones para $N=100$, $500$, $1000$, $5000$, $10000$.
+\az{Estudiar lo mismo para un potencial escal{\'o}n y uno triangular}. Desarrollar la teor{\'\i}a y comparar con los resultados computacionales.
+
+
+\item{\ro{\it Voluntario 2:}} Estudiar el oscilador arm{\'o}nico (entre paredes infinitas). Calcular el periodo en funci{\'o}n de $N$ y $k_0$. Comparar con los resultados te{\'o}ricos.
+\end{itemize}
+
+\section*{N{\'u}meros complejos en Fortran.}
+
+\begin{itemize}
+\item{}{\it Declaraci{\'o}n:} implicit double complex ($h$)
+\item{}{\it Asignaci{\'o}n de valores constantes:} $h=(1.0d0,0.3d0)$ (=1+i0.3).
+\item{}{\it Asignaci{\'o}n de variables:} $h=complex(a,b)$ (=a+ib).
+\end{itemize}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
