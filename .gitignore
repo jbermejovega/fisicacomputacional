@@ -65,3 +65,38 @@ Module.symvers
 Mkfile.old
 dkms.conf
 .vscode/tasks.json
+
+# Large media, archives and presentations (avoid committing bulky binaries)
+# Video/audio
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.flac
+*.mp3
+
+# Office docs and slides
+*.pptx
+*.ppt
+*.ppsx
+*.odp
+*.key
+*.docx
+*.xlsx
+
+# Large documents and archives
+*.pdf
+*.zip
+*.tar
+*.gz
+*.rar
+*.7z
+
+# Images (if large or generated)
+*.tif
+*.tiff
+*.bmp
+
+# Git LFS candidates
+# Add specific paths below if you migrate files to Git LFS
+# e.g., 07_Leccion_Schrodinger/*.mp4
