@@ -1,0 +1,14 @@
+name: fisica-computacional
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12
+  - numpy
+  - scipy
+  - matplotlib
+  - pandas
+  - sympy
+  - jupyterlab
+  - ipykernel
+  - pytest
+  - pip
