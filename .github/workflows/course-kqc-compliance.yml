@@ -1,0 +1,24 @@
+name: Course KQC Compliance
+
+on:
+  pull_request:
+    paths:
+      - 'README.md'
+      - 'PACADOC.md'
+      - 'docs/SIGIL_API_KQC_TEACHING_COMPLIANCE.md'
+      - 'registry/sigil_api_kqc_teaching_compliance_v1.yaml'
+      - 'tools/validate_course_kqc.py'
+      - 'environment.yml'
+      - '.github/workflows/course-kqc-compliance.yml'
+  workflow_dispatch:
+
+jobs:
+  validate-course-kqc:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate course KQC compliance
+        run: python tools/validate_course_kqc.py

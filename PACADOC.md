@@ -15,6 +15,10 @@ capsule:
     safety_first: true
     accessibility_first: true
     reproducibility_first: true
+    sigil_api_adaptable: true
+    kqc_policy_bound: true
+    course_maintenance_ready: true
+    compliance_reviewable: true
     no_open_branch: true
 
   repository:
@@ -32,6 +36,8 @@ capsule:
     - PACA_CORE
     - PACA_PDG
     - SIGIL
+    - SIGIL_API
+    - KQC
     - UAP
     - TRACE
     - PYTHON
@@ -56,6 +62,8 @@ code
 +
 parameters
 +
+units
++
 replayable output
 ```
 
@@ -74,6 +82,14 @@ Start here:
 6. Run examples in order.
 7. Change one parameter at a time.
 8. Record outputs and errors.
+```
+
+Recommended environment path:
+
+```bash
+conda env create -f environment.yml
+conda activate fisica-computacional
+python tools/validate_course_kqc.py
 ```
 
 ## 3. Student safety rule
@@ -141,10 +157,39 @@ replay_record:
   python_version: "..."
   package_manager: conda_or_pip
   input_parameters: "..."
+  units: "..."
   status: pass_or_error
 ```
 
-## 6. PACA/PACAPDG interpretation
+## 6. SIGIL API / KQC teaching compliance
+
+SIGIL API / KQC teaching compliance is the maintenance rule for adapting this course over time.
+
+```text
+course_patch
+-> teaching_trace
+-> SIGIL_API_adaptation_check
+-> KQC_replay
+-> compliance_certificate
+-> reviewable_course_state
+```
+
+A SIGIL API adaptation must state:
+
+```yaml
+sigil_api_adaptation:
+  old_surface: previous command, notebook pattern, API, or workflow
+  new_surface: replacement command, notebook pattern, API, or workflow
+  student_impact: what changes for learners
+  migration_note: one-step explanation for teaching assistants
+  replay_status: pass_or_error
+```
+
+A course correction is ready for review only when method, parameters, units, code path, and replay evidence remain visible.
+
+The policy lives in `docs/SIGIL_API_KQC_TEACHING_COMPLIANCE.md` and the machine-readable invariant lives in `registry/sigil_api_kqc_teaching_compliance_v1.yaml`.
+
+## 7. PACA/PACAPDG interpretation
 
 Different systems may render the same computational object differently:
 
@@ -168,7 +213,7 @@ different student environments
 same computational learning identity
 ```
 
-## 7. Course conduct
+## 8. Course conduct
 
 Allowed:
 
@@ -188,7 +233,7 @@ Forbidden:
 - presenting non-reproducible output as final;
 - reporting numerical results without units, parameters, or method.
 
-## 8. Minimal command discipline
+## 9. Minimal command discipline
 
 Use commands in small blocks.
 
@@ -206,7 +251,7 @@ jupyter --version
 
 Do not paste long unknown command chains without reading them.
 
-## 9. Teaching assistant checklist
+## 10. Teaching assistant checklist
 
 ```text
 student can open terminal
@@ -216,9 +261,10 @@ student can run first example
 student can copy exact error
 student can reset/recreate environment if needed
 student can identify parameters and units
+student can run the KQC course validator
 ```
 
-## 10. Computational physics law
+## 11. Computational physics law
 
 ```text
 numerical result valid
@@ -230,6 +276,6 @@ method stated
 ∧ output traceable
 ```
 
-## 11. Final statement
+## 12. Final statement
 
-This repository is PACADOC-normalized for UGR first users: it prioritizes clear entry, accessible learning, safe debugging, reproducible computation, and traceable numerical physics.
+This repository is PACADOC-normalized for UGR first users: it prioritizes clear entry, accessible learning, safe debugging, reproducible computation, traceable numerical physics, and KQC-compliant adaptation to SIGIL API changes.

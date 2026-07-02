@@ -1,0 +1,71 @@
+schema: fisicacomputacional.sigil_api_kqc_teaching_compliance.v1
+id: SIGIL_API_KQC_TEACHING_COMPLIANCE_V1
+repository: jbermejovega/fisicacomputacional
+canonical_surface: main
+status:
+  canonical: true
+  teaching_repository: true
+  student_facing: true
+  sigil_api_adaptable: true
+  kqc_policy_bound: true
+  replay_required: true
+  compliance_validator_bound: true
+  copyright_notice_required: true
+  no_identity_transport: true
+  no_branch_topology_as_proof: true
+copyright:
+  holder: JJBV
+  typed_author: Jara Juana Bermejo Vega
+  notice: Copyright (c) JJBV / Jara Juana Bermejo Vega. All rights reserved.
+  all_rights_reserved: true
+kqc:
+  exact_sequence: KQC
+  kernel: course artifact, notebook, script, exercise, environment, or explanation
+  quotient: student machine and classroom context quotient
+  certificate: method, parameters, units, replay path, and traceable output
+  publish_gate:
+    replay_required: true
+    method_required: true
+    parameters_required: true
+    units_required: true
+    student_impact_required: true
+    sigil_api_migration_note_required: true
+sigil_api_adaptation:
+  accepted_when:
+    - old_surface_recorded
+    - new_surface_recorded
+    - student_impact_recorded
+    - migration_note_recorded
+    - replay_status_recorded
+    - kqc_certificate_required_before_publication
+  rejected_when:
+    - output_trace_hidden
+    - units_removed
+    - parameters_removed
+    - branch_topology_claimed_as_proof
+    - identity_or_copyright_authority_transported
+maintenance_cadence:
+  before_term:
+    - environment_check
+    - first_run_check
+  mid_term:
+    - api_drift_corrections
+    - classroom_pain_point_corrections
+  after_term:
+    - structural_review
+    - next_release_notes
+  whenever_sigil_api_changes:
+    - adaptation_note
+    - kqc_replay
+    - instructor_review
+required_files:
+  - README.md
+  - PACADOC.md
+  - docs/SIGIL_API_KQC_TEACHING_COMPLIANCE.md
+  - registry/sigil_api_kqc_teaching_compliance_v1.yaml
+  - tools/validate_course_kqc.py
+  - environment.yml
+  - .github/workflows/course-kqc-compliance.yml
+validator:
+  command: python tools/validate_course_kqc.py
+  dependencies: python-standard-library-only
