@@ -7,6 +7,8 @@ This repository is normalized as a replay-safe educational repository for Comput
 Start here:
 
 - [`PACADOC.md`](PACADOC.md) — first-user / student landing guide
+- [`docs/SIGIL_API_KQC_TEACHING_COMPLIANCE.md`](docs/SIGIL_API_KQC_TEACHING_COMPLIANCE.md) — SIGIL API / KQC Course Compliance policy
+- [`environment.yml`](environment.yml) — stable course environment for local replay
 
 ## What this repository is
 
@@ -28,6 +30,27 @@ units
 replayable output
 ```
 
+## SIGIL API / KQC Course Compliance
+
+Course improvements, global corrections, and SIGIL API adaptations are accepted through a KQC teaching gate:
+
+```text
+course_patch
+-> teaching_trace
+-> SIGIL_API_adaptation_check
+-> KQC_replay
+-> compliance_certificate
+-> reviewable_course_state
+```
+
+Before publishing a teaching update, run:
+
+```bash
+python tools/validate_course_kqc.py
+```
+
+The validator keeps `README.md`, `PACADOC.md`, the compliance policy, registry, environment file, and CI workflow connected. Physics correctness still requires method, parameters, units, code path, and replayable output.
+
 ## First student path
 
 ```text
@@ -39,6 +62,14 @@ replayable output
 6. Change one parameter at a time.
 7. Save outputs and errors.
 8. Ask for help with the exact error message.
+```
+
+Recommended course environment:
+
+```bash
+conda env create -f environment.yml
+conda activate fisica-computacional
+python tools/validate_course_kqc.py
 ```
 
 ## Debugging rule
