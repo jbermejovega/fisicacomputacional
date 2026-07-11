@@ -1,0 +1,39 @@
+id: EXAMEN_FINAL_FISICA_COMPUTACIONAL_QQUAPP_2026
+repo: jbermejovega/fisicacomputacional
+status:
+  canonical: true
+  student_facing: true
+  final_exam: true
+  qquapp_flow: true
+  kqc_teaching_compliance: true
+  replay_required: true
+documents:
+  examen: docs/examenes/EXAMEN_FINAL_FISICA_COMPUTACIONAL_QQUAPP_2026.md
+structure:
+  mandatory_questions: 6
+  advanced_questions:
+    - hpc_optimization_n_body
+    - result_integration_cross_validation
+  mandatory_topics:
+    - interpolation_fitting_uncertainty
+    - ordinary_differential_equations_error_control
+    - monte_carlo_statistical_reproducibility
+    - fourier_signal_spectral_analysis
+  voluntary_questions: 2
+  voluntary_integration:
+    - parallel_benchmark_design
+    - reproducible_scientific_report
+rubric:
+  mandatory_points: 10.0
+  voluntary_extra_points: 2.0
+  required_law:
+    - method_stated
+    - code_path_replayable
+    - parameters_visible
+    - units_visible
+    - output_traceable
+    - physical_interpretation_coherent
+invariants:
+  - no_replay_no_certified_result
+  - one_error_one_change_one_rerun_one_note
+  - physics_result_equals_method_code_parameters_units_replayable_output
