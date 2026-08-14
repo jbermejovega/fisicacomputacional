@@ -1,0 +1,55 @@
+{
+  "schema_id": "SIGIL_SDK_SIGILO3_REVERSIBLE_PORTAL_COMPATIBILITY_V1",
+  "consumer_repository": "jbermejovega/fisicacomputacional",
+  "canonical_source": {
+    "repository": "jbermejovega/sigilbook",
+    "pull_request": 867,
+    "head_sha": "af91b6b6f22425f57cc25d6dda58a591913dd750",
+    "module_path": "sigilapi/sigil_sdk_sigilo3_reversible_portal.py",
+    "module_blob_sha": "6702a01683c7bf7b438c1773a0dd1834dc749513",
+    "manifest_path": "manifests/SIGIL_SDK_SIGILO3_REVERSIBLE_PORTAL_PATTERN_V1.json",
+    "manifest_blob_sha": "8e044bc925b4044421b3c2e7f29cf3f8e7ab13a9",
+    "authority": "SOURCE_BOUND_REFERENCE_ONLY"
+  },
+  "required_pipeline": [
+    "INVOCATION",
+    "KOKOMPI_MOVE",
+    "PYDANTIKA",
+    "DISKOTIKA",
+    "KUIR",
+    "KODE",
+    "KUBE",
+    "KI",
+    "KD",
+    "KLI",
+    "PACAPDG",
+    "UAP",
+    "SAFE_REPLAY"
+  ],
+  "accepted_portal_kinds": [
+    "PORTAL",
+    "TELEPORT",
+    "MIRROR",
+    "FUSION_CIRCLE"
+  ],
+  "compatibility_invariants": {
+    "invocation_precedes_inventory": true,
+    "kokompi_move_precedes_compilation": true,
+    "fan_in_bounded": true,
+    "fan_in_maximum": 8,
+    "pi_fixed": true,
+    "fusion_reversible": true,
+    "voices_recoverable": true,
+    "identity_transport": false,
+    "plural_collapse": false,
+    "runtime_authority": false,
+    "workflow_dispatch_authority": false,
+    "git_mutation_authority": false,
+    "general_hott_equivalence_claimed": false,
+    "safe_replay": true
+  },
+  "implementation_copied": false,
+  "compatibility_mode": "MANIFEST_AND_TESTS_ONLY",
+  "promotion": "HOLD_UNTIL_CANONICAL_SOURCE_PROMOTION_AND_CONSUMER_REVIEW"
+}
+
