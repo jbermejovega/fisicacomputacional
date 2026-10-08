@@ -1,0 +1,107 @@
+{
+  "schema_id": "PHYSICS_ARTS_ATLAS_SIGIL_SYMBOLIK_PUSHOUT_V1",
+  "status": "REVIEW_CANDIDATE_TWO_REPOSITORY_SOURCE_BOUND",
+  "author": "Jara Juana Bermejo Vega",
+  "teaching_repository": "jbermejovega/fisicacomputacional",
+  "source_repository": "jbermejovega/sigilbook",
+  "source_schema": "SIGIL_SYMBOLIK_UNIVERSAL_ABSTRACT_FIELD_QML_V1",
+  "source_api_routes": [
+    "GET /sigil/symbolik/library",
+    "POST /sigil/symbolik/field-theory/ising"
+  ],
+  "teaching_materials": [
+    "book-physics-arts/_quarto.yml",
+    "book-physics-arts/index.qmd",
+    "book-physics-arts/atlas-de-fisica.qmd",
+    "book-physics-arts/practica-ising-qml.qmd",
+    "book-physics-arts/examples/ising_exact.py"
+  ],
+  "teaching_tests": "book-physics-arts/tests/test_ising_exact.py",
+  "teaching_kqc_policy": "docs/SIGIL_API_KQC_TEACHING_COMPLIANCE.md",
+  "common_scientific_interface": {
+    "n": 4,
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        0,
+        3
+      ]
+    ],
+    "J": "1",
+    "h": "0",
+    "beta": "1/2",
+    "spin_bit_mapping": {
+      "plus": 0,
+      "minus": 1
+    },
+    "ground_energy": "-4",
+    "ground_state_bits": [
+      "0000",
+      "1111"
+    ],
+    "unit_convention": "J,h energy unit; beta inverse energy unit"
+  },
+  "physics_book_scope": "BROAD_DISCIPLINARY_ATLAS_NOT_FULLY_WRITTEN",
+  "contextual_style": {
+    "role": "ARTISTIC_PREPARATION_ONLY",
+    "examples": [
+      "LIGHT",
+      "MUSIC",
+      "DANCE",
+      "VISUAL_ART",
+      "SONIFICATION",
+      "GENERATIVE_ART"
+    ],
+    "not_scientific_evidence": true
+  },
+  "independent_publishing_authority": true,
+  "interfaces": {
+    "source_program_replay": "source_digest and Ising model convention",
+    "target_book_replay": "local pure-Python script and KQC validation",
+    "source_branch_proposal": "feat/sigil-symbolik-universal-abstract-qml-field-v1",
+    "target_branch_proposal": "feat/physics-arts-atlas-symbolik-ising-qml-v1"
+  },
+  "migration_note": "Standalone classical Ising example runs without installing SIGIL; optional API adapter uses the proposed endpoints when integrated.",
+  "student_impact": "Adds first fully worked art+physics+QML exercise; preserves course first-user instructions and package environment",
+  "limits": {
+    "categorical_pushout_property_proved": false,
+    "course_release_certified": false,
+    "physical_quantization_proved": false,
+    "quantum_model_trained": false,
+    "quarto_rendered": false,
+    "all_physics_chapters_complete": false
+  },
+  "invariants": [
+    "METHOD_PARAMETERS_UNITS_REPLAY",
+    "NO_AUTHORITY_TRANSPORT",
+    "NO_IDENTITY_TRANSPORT",
+    "NO_COERCION",
+    "SAFE_REPLAY",
+    "PIORNALEGO_ES_CANON"
+  ],
+  "source_pull_request": "https://github.com/jbermejovega/sigilbook/pull/3662",
+  "course_pull_request": "https://github.com/jbermejovega/fisicacomputacional/pull/4",
+  "source_status": "DRAFT_UNMERGED",
+  "course_status": "DRAFT_UNMERGED",
+  "relational_spin_pedagogy": {
+    "topic": "site-occurrence-spin coupling and finite frame relabeling",
+    "art_motif": "MARICA_INDIVISIBLE",
+    "kind": "FICTIONAL_QUEER_ART_TROPE",
+    "book_section": "book-physics-arts/practica-ising-qml.qmd",
+    "scientific_energy_mutated": false,
+    "spin_half_not_classical_spin": true,
+    "api_ref": "https://github.com/jbermejovega/sigilbook/pull/3662"
+  },
+  "artistic_motif_is_measurement": false
+}

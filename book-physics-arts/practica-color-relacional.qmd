@@ -1,0 +1,82 @@
+---
+title: "Práctica 03 — El color como faceta irreducible"
+subtitle: "Física de la luz, representación computacional y estética plural"
+---
+
+# Propósito
+
+Esta práctica incorpora el axioma artístico SIGIL
+`SIGIL_IRREDUCIBLE_INSEPARABLE_COLOR_V1` a Física Computacional.
+
+**Axioma artístico:** el color es una faceta relacional inseparable de la
+manifestación estética del objeto, no un metadato descartable. Esto no
+afirma que el color sea una magnitud física fundamental indivisible.
+
+## Física: espectro, radiometría y colorimetría
+
+La distribución espectral de potencia \(S(\lambda)\), la iluminación,
+la reflectancia y el observador determinan la respuesta colorimétrica.
+En el modelo CIE 1931, para condiciones y normalización declaradas:
+
+\[
+X=k\int S(\lambda)\bar x(\lambda)\,d\lambda,\quad
+Y=k\int S(\lambda)\bar y(\lambda)\,d\lambda,\quad
+Z=k\int S(\lambda)\bar z(\lambda)\,d\lambda.
+\]
+
+La tripleta XYZ es una representación colorimétrica, no una descripción
+completa de la percepción ni del espectro. Distintos espectros pueden
+ser metaméricos bajo condiciones específicas.
+
+## Identidad y representación
+
+\[
+(X,C_1)\xrightarrow{f,W}(X,C_2).
+\]
+
+El objeto fuente conserva su identidad. La transformación cromática
+queda registrada mediante parámetros, contexto y testigo; no se
+presupone equivalencia perceptiva.
+
+En SIGIL, `COLOR` no se identifica con un código HEX ni con una
+sensación subjetiva. Estados como `UNRENDERED` y `QUNO` permiten
+declarar ausencia de renderizado sin inventar un color visible.
+
+## Experimento computacional
+
+El ejemplo `examples/color_relational.py` implementa una
+transformación RGB lineal a luminancia relativa sRGB con la
+transferencia inversa especificada. Es un **ejercicio de colorimetría
+de pantalla**, no una reconstrucción espectral ni una medición
+fisiológica.
+
+1. Calcula la luminancia relativa de dos colores sRGB.
+2. Calcula su relación de contraste.
+3. Cambia el estilo preservando el identificador del objeto fuente.
+4. Registra el contexto de pantalla y los parámetros del cálculo.
+5. Propón una codificación adicional mediante forma, textura o texto,
+   evitando depender únicamente del color.
+
+## Ejercicio artístico
+
+Diseña dos paletas para una misma red pentagonal de la Red de Indra
+o una visualización del modelo de Ising. Conserva los nodos, aristas
+y resultados físicos. Documenta las decisiones estéticas como
+`CONTEXTUAL_PREPARATION`.
+
+Una transformación de color que modifica datos, umbrales físicos o
+interpretaciones debe declararse como cambio del modelo o del
+protocolo, no simplemente como `RESTYLE`.
+
+## Reproducibilidad
+
+```bash
+python book-physics-arts/examples/color_relational.py
+python -m pytest -q book-physics-arts/tests/test_color_relational.py
+```
+
+**Fronteras:** estilo no equivale a evidencia; contraste numérico
+no certifica por sí solo accesibilidad; representación no equivale
+a identidad ni a percepción.
+
+**PIORNALEGO ES CANON.**

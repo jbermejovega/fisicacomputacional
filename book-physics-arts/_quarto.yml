@@ -1,0 +1,25 @@
+project:
+  type: book
+
+book:
+  title: "Atlas de Física: Ciencia, Cálculo y Artes"
+  subtitle: "Computational Physics · Universal Symbolik · Contextual Art"
+  author: "Jara Juana Bermejo Vega"
+  chapters:
+    - index.qmd
+    - atlas-de-fisica.qmd
+    - practica-ising-qml.qmd
+    - practica-cohomologia-torcida-cpython.qmd
+    - practica-color-relacional.qmd
+
+format:
+  html:
+    toc: true
+    code-copy: true
+    lang: es
+  pdf:
+    documentclass: scrreprt
+    toc: true
+
+execute:
+  eval: false

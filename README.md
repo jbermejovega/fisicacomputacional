@@ -10,6 +10,26 @@ Start here:
 - [`docs/SIGIL_API_KQC_TEACHING_COMPLIANCE.md`](docs/SIGIL_API_KQC_TEACHING_COMPLIANCE.md) — SIGIL API / KQC Course Compliance policy
 - [`environment.yml`](environment.yml) — stable course environment for local replay
 
+## Physics × Arts book (source-bound draft)
+
+The evolving [Atlas de Física: Ciencia, Cálculo y Artes](book-physics-arts/index.qmd)
+proposes a cross-disciplinary book spanning the main domains of physics,
+computational methods and contextual artistic interpretation. The atlas is a
+roadmap: not every chapter has been written.
+
+First worked chapter: [finite Ising field and QML](book-physics-arts/practica-ising-qml.qmd).
+It includes a pure-Python exact-enumeration script, student tasks, physical
+units and reproducibility checks. The corresponding SIGIL Symbolik API is
+an optional source-bound integration, not a required course dependency.
+
+```bash
+python book-physics-arts/examples/ising_exact.py
+python -m pytest -q book-physics-arts/tests/test_ising_exact.py
+```
+
+Scientific results are evaluated separately from artistic STYLE, and the
+existing PACADOC / KQC teaching contract remains authoritative.
+
 ## What this repository is
 
 This repository supports learning computational physics through code, notebooks, numerical experiments, and reproducible workflows.

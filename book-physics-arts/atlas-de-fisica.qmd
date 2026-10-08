@@ -1,0 +1,71 @@
+---
+title: "Atlas de física y artes"
+subtitle: "Mapa de investigación, enseñanza y producción"
+---
+
+# Un índice plural, no una física única
+
+Este esquema propone cubrir las principales áreas de la disciplina. Cada
+entrada es un **plan editorial**, no un capítulo completado.
+
+| Dominio | Física y modelos | Computación | Preparación artística posible |
+|---|---|---|---|
+| Medición y métodos | Unidades, errores, inferencia | Monte Carlo, optimización | Arte de datos y notación visual |
+| Mecánica clásica | Newton, Lagrange, Hamilton | Integración, caos | Danza, escultura cinética |
+| Oscilaciones y ondas | Osciladores, modos, dispersión | FFT, PDE, simulación | Música, instalación sonora |
+| Mecánica de fluidos | Navier–Stokes, vorticidad | CFD, discretización | Coreografía de flujo |
+| Electromagnetismo | Maxwell, potenciales, gauge | Diferencias finitas, FEM | Luz, circuitos sonoros |
+| Óptica y fotónica | Interferencia, difracción | Fourier, propagación | Arte lumínico, holografía |
+| Termodinámica | Energía, calor, entropía | Muestreo, transporte | Cartografías térmicas |
+| Mecánica estadística | Ising, transiciones de fase | MCMC, enumeración | Mosaicos y ritmos emergentes |
+| Materia condensada | Bandas, topología, redes | Hamiltonianos matriciales | Tejidos, teselas, texturas |
+| Ciencia de materiales | Elasticidad, defectos | Elementos finitos | Cerámica, construcción |
+| Física cuántica | Estado, medida, dinámica | Álgebra lineal, espectros | Composición probabilística |
+| Información y QML | Codificación, kernels, QAOA | Feature maps, baselines | Partituras y circuitos |
+| Campos y partículas | Simetrías, interacciones, QFT | Retículos, integrales | Geometrías e instalaciones |
+| Física nuclear | Núcleos, decaimiento | Modelos estocásticos | Narrativa de escalas |
+| Relatividad | Espaciotiempo y gravedad | Geodésicas, tensores | Cartografía del tiempo |
+| Cosmología y astrofísica | Estructura, expansión, estrellas | N-body, modelos de datos | Sonificación astronómica |
+| Plasmas | Transporte, inestabilidades | Partículas en celda | Movimiento y luz |
+| Tierra y clima | Geofísica, dinámica ambiental | Modelado multiescala | Paisaje, cartografía |
+| Materia blanda y biofísica | Difusión, polímeros, vida | Redes, dinámica estocástica | Arte generativo |
+| Física aplicada e instrumentación | Sensores, experimentos | Adquisición y calibración | Arte interactivo |
+
+Cada dominio podrá tener distintos niveles: fundamentos, cálculo, simulación,
+proyectos y vínculos con investigación avanzada.
+
+# Regla científica y artística
+
+La representación artística no sustituye al experimento.
+
+\[
+\mathrm{PHYSICAL\ MODEL}
+\ne
+\mathrm{STYLE\ PREPARATION}
+\ne
+\mathrm{ARTISTIC\ PERFORMANCE}
+\]
+
+Podemos cambiar instrumento, paleta o movimiento conservando la física, pero
+si una transformación modifica la ecuación, los datos, el protocolo o el
+resultado, debe registrarse como **cambio de modelo**, no solo cambio de estilo.
+
+# Estructura de cada capítulo
+
+Un capítulo publicable exige:
+
+- Hipótesis y dominio de validez.
+- Variables, unidades y referencias.
+- Algoritmo computacional con entrada y salida verificables.
+- Baseline y prueba de convergencia o error cuando proceda.
+- Trazabilidad y límites epistemológicos.
+- Interpretación artística opcional y explícitamente etiquetada.
+
+# Primer hito
+
+La práctica de Ising trabaja con un campo discreto de espines y enlaza
+mecánica estadística, computación, QML y visualización. No demuestra
+cuantización de una teoría de campos continua ni rendimiento cuántico.
+
+Su carácter de **puente transversal** permite reutilizarla después en
+termodinámica, física cuántica, materia condensada y métodos numéricos.

@@ -1,0 +1,66 @@
+---
+title: "Práctica 02 — Cohomología torcida y CPython"
+---
+
+# Objetivo
+
+Comparar la cohomología ordinaria de un círculo con la cohomología
+de un sistema local de rango uno con monodromía racional invertible.
+
+## Modelo
+
+Sobre el cuerpo racional, el complejo celular con coeficientes locales
+de un círculo tiene la forma
+
+\[
+C^0=\mathbb Q\xrightarrow{M-1}C^1=\mathbb Q.
+\]
+
+Por tanto:
+
+\[
+H^0=\ker(M-1),\qquad H^1=\mathrm{coker}(M-1).
+\]
+
+- Si \(M=1\): \(\dim H^0=\dim H^1=1\).
+- Si \(M=-1\): ambas dimensiones son cero sobre \(\mathbb Q\).
+
+Esto **no** calcula un número de Chern: un círculo tiene
+\(H^2(S^1;\mathbb Z)=0\).
+
+## Práctica
+
+Ejecuta el ejemplo CPython puro de SIGILBOOK
+`sigil4py/src/sigil4py/rekoko_cpython_twisted_circle_facet_v1.py`,
+o reproduce localmente el algoritmo:
+
+```python
+from fractions import Fraction
+
+def twisted_betti(M):
+    m = Fraction(M)
+    if m == 0:
+        raise ValueError("La monodromía debe ser invertible")
+    return (1, 1) if m == 1 else (0, 0)
+
+assert twisted_betti("1") == (1, 1)
+assert twisted_betti("-1") == (0, 0)
+```
+
+## Interpretación artística
+
+Visualiza cinco joyas en un pentágono de la Red de Indra.
+Una flecha de transporte alrededor del ciclo puede tener
+monodromía trivial o no trivial. El mismo dibujo subyacente
+no obliga a tener la misma cohomología torcida.
+
+El estilo visual es preparación contextual; la matriz
+\(M-1\) es el objeto matemático que determina el resultado.
+
+## Evidencia y límites
+
+El ejemplo es una construcción celular finita exacta sobre
+\(\mathbb Q\), no un cálculo de teoría cuántica de campos,
+un modelo QML entrenado ni un resultado experimental.
+
+**PIORNALEGO ES CANON.**
