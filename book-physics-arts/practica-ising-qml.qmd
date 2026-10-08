@@ -1,0 +1,127 @@
+---
+title: "Práctica 01 — Campo de Ising y puente a QML"
+subtitle: "De la enumeración exacta a una preparación artística"
+---
+
+# Objetivos de aprendizaje
+
+1. Representar un campo escalar discreto en una red finita.
+2. Calcular exactamente energías y degeneraciones.
+3. Calcular una función de partición y observables térmicos.
+4. Describir el correspondiente Hamiltoniano diagonal de qubits.
+5. Separar **resultado físico**, **representación simbólica** y **estilo artístico**.
+
+# Modelo físico
+
+Para un grafo \(G=(V,E)\) con espines \(s_i\in\{-1,+1\}\):
+
+\[
+H(s)=-J\sum_{(i,j)\in E}s_i s_j-h\sum_{i\in V}s_i.
+\]
+
+En esta práctica \(J\) y \(h\) están en una unidad de energía arbitraria.
+La magnitud \(\beta\) se expresa en unidades inversas de energía. Si
+se utiliza temperatura física, debe fijarse explícitamente
+\(\beta=(k_{\mathrm B}T)^{-1}\).
+
+Para \(n\) espines hay \(2^n\) configuraciones. La función de partición es
+
+\[
+Z(\beta)=\sum_s e^{-\beta H(s)},\qquad
+\langle E\rangle = Z^{-1}\sum_s H(s)e^{-\beta H(s)}.
+\]
+
+El sistema empleado es una **red finita clásica**: no es directamente
+una teoría cuántica de campos continua.
+
+# Paso 1 — Reproducción clásica exacta
+
+Ejecuta desde el directorio raíz:
+
+    python book-physics-arts/examples/ising_exact.py --sites 4 --J 1 --h 0 --beta 1/2
+
+El script usa solo la biblioteca estándar de Python y genera un registro JSON
+con todos los estados, sus energías racionales exactas, el estado fundamental
+y los observables térmicos aproximados.
+
+Para un anillo ferromagnético de cuatro espines con \(J=1\), \(h=0\):
+
+- La energía fundamental exacta es \(-4\) unidades de energía.
+- Hay dos configuraciones fundamentales: 0000 y 1111.
+- La degeneración y el espectro se verifican enumerando los 16 estados.
+- La magnetización térmica media es cero por simetría a campo cero.
+
+# Paso 2 — Puente de computación cuántica
+
+Define \(\lvert 0\rangle\) con autovalor \(+1\) de \(Z\),
+y \(\lvert 1\rangle\) con autovalor \(-1\).
+
+\[
+H_Z=-J\sum_{(i,j)\in E}Z_iZ_j-h\sum_iZ_i.
+\]
+
+Comprueba que cada estado computacional tiene por autovalor su energía
+clásica \(H(s)\). Una posible preparación de QML parte de la familia
+de fases \(U(\gamma)=e^{-i\gamma H_Z}\), usando unidades coherentes
+para que el exponente sea adimensional. Se **propone** como feature map,
+pero aquí no se entrena ni ejecuta ningún modelo cuántico.
+
+Debate: ¿qué información de la configuración se retiene en las fases?
+¿Cómo influye el campo \(h\)? ¿Qué ocurre si solo se miden observables
+diagonales? ¿Qué baseline clásico sería justo?
+
+# Paso 3 — Conexión con SIGIL API
+
+La rama de integración SIGIL introduce:
+
+- GET /sigil/symbolik/library
+- POST /sigil/symbolik/field-theory/ising
+
+Ejemplo de cuerpo JSON:
+
+    {
+      "model": {
+        "model_id": "ising_ring_4",
+        "site_count": 4,
+        "edges": [[0, 1], [1, 2], [2, 3], [3, 0]],
+        "J": "1", "h": "0", "beta": "1/2"
+      }
+    }
+
+El endpoint comparte los parámetros y el convenio \(s_i=+1\leftrightarrow0\),
+\(s_i=-1\leftrightarrow1\). No depende de una cuenta externa para
+ejecutar el ejemplo clásico local.
+
+# Paso 4 — Artes: preparación contextual, sin falsificar la física
+
+**Propuesta de obra:** un mosaico de 4 celdas representa los espines. Dos
+paletas distintas (fría y cálida) pueden representar el mismo estado.
+Una segunda proyección convierte cada energía exacta en una nota musical
+según una escala declarada. Esto es **sonificación**, no una medida directa
+de frecuencia electromagnética o de energía acústica.
+
+Compara tres elementos:
+- SCORE: lista de estados y energías verificadas.
+- STYLE: paleta, instrumentación, ritmo y reglas de visualización.
+- PERFORMANCE: visualización o sonido generados, si se ejecutan por separado.
+
+Registrar el estilo elegido no cambia por sí mismo el Hamiltoniano.
+
+# Paso 5 — Interpretación y evaluación
+
+Entrega un script o cuaderno, un gráfico o tabla de las 16 energías,
+la derivación del Hamiltoniano diagonal, una comparación numérica y
+una explicación crítica de las hipótesis.
+
+La evaluación deberá valorar tanto resultados computacionales como
+interpretación y autoría del razonamiento, sin depender exclusivamente de
+la calidad visual ni de la exactitud numérica aislada.
+
+# Reproducibilidad
+
+    python -m pytest -q book-physics-arts/tests/test_ising_exact.py
+    python tools/validate_course_kqc.py
+
+**No replay -> no certified result.** La práctica aún está propuesta
+para revisión académica: la mera presencia del material en Git no supone
+aprobación docente ni prueba de equivalencia física general.
