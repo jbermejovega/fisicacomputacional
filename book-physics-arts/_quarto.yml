@@ -9,6 +9,7 @@ book:
     - index.qmd
     - atlas-de-fisica.qmd
     - practica-ising-qml.qmd
+    - practica-cohomologia-torcida-cpython.qmd
 
 format:
   html:
