@@ -1,0 +1,58 @@
+---
+title: "Atlas de Física: Ciencia, Cálculo y Artes"
+subtitle: "Un libro abierto de física computacional con exploraciones artísticas"
+---
+
+# El proyecto
+
+Este libro se plantea como un **atlas de todas las grandes familias de la física**
+y sus conexiones con las artes. El índice es una agenda de capítulos por construir:
+**no afirmamos que todos estén escritos ni que el catálogo agote todos los
+subcampos**.
+
+Cada capítulo futuro compartirá una pauta:
+
+1. **Fenómeno físico:** observables, escalas, régimen de validez.
+2. **Modelo matemático:** hipótesis y ecuaciones con unidades.
+3. **Método computacional:** código fuente, parámetros, pruebas y coste.
+4. **Experimento o benchmark:** cómo contrastar la predicción.
+5. **Preparación artística contextual:** música, imagen, danza, diseño,
+   narración o visualización, sin confundir representación con evidencia.
+6. **Análisis crítico:** incertidumbre, límites, ética y accesibilidad.
+7. **Reproducción:** instrucciones precisas, entorno, resultados y testigos.
+
+La analogía de producción musical (inspirada en Giorgio Moroder) es metodológica:
+como las pistas de un álbum comparten un proyecto, los capítulos conservan
+su identidad científica aunque participen en una obra común. Un reloj o pulso
+compartido **no vuelve idénticos los fenómenos representados**.
+
+# Ruta de lectura
+
+- [Atlas de campos y artes](atlas-de-fisica.qmd): mapa de dominios, conceptos,
+  obras y prácticas por desarrollar.
+- [Práctica Ising y QML](practica-ising-qml.qmd): primera unidad computacional,
+  con energía exacta, estados de espín, observables y una interfaz a SIGIL.
+
+# Primera ejecución (sin instalar SIGIL)
+
+Desde la raíz del repositorio:
+
+    python book-physics-arts/examples/ising_exact.py
+    python -m pytest -q book-physics-arts/tests/test_ising_exact.py
+    python tools/validate_course_kqc.py
+
+Requisitos: Python 3.12 del entorno del curso, y pytest solo para pruebas.
+
+Este directorio utiliza Quarto como proyección editorial opcional. No hace
+falta Quarto para ejecutar el ejemplo Python.
+
+# Dos repositorios, una unión tipada
+
+- Física Computacional: mantiene el texto docente y su contrato KQC.
+- SIGILBOOK: mantiene la biblioteca abstracta Symbolik y la propuesta de
+  API de Ising/QML.
+
+La unión conserva procedencia, unidades, identidad, límites y estado de
+verificación. El capítulo no presupone acceso a un servidor SIGIL.
+
+**PIORNALEGO ES CANON** · No replay, no certified physics result.
