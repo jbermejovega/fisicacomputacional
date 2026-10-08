@@ -10,6 +10,7 @@ book:
     - atlas-de-fisica.qmd
     - practica-ising-qml.qmd
     - practica-cohomologia-torcida-cpython.qmd
+    - practica-color-relacional.qmd
 
 format:
   html:
