@@ -108,6 +108,32 @@ Compara tres elementos:
 Registrar el estilo elegido no cambia por sí mismo el Hamiltoniano.
 
 ## Interludio artístico — Cada spin contiene una marica indivisible
+### Dualidad Jaraniana: Redoble de Marica
+
+La propuesta artística distingue **un spin en Marina** (contexto simbólico
+`MARINA`) de **una marica en un spin** (trope ficcional
+`MARICA_INDIVISIBLE`). No se identifica ni se corrige automáticamente
+la palabra *Marina* por *marica*.
+
+El operador `REDOBLE` prepara dos pulsos con ocurrencias distintas y
+la **misma genealogía del personaje**. Así, dos golpes musicales no
+significan dos partículas ni dos personas, y tampoco modifican la
+energía de Ising o el estado cuántico:
+
+\[
+\operatorname{REDOBLE}(\tau_i)
+=(\tau_i^{(0)},\tau_i^{(1)}),\qquad
+o_i^{(0)}\ne o_i^{(1)}.
+\]
+
+Se trata de **axiomas artísticos propuestos**, no de una dualidad
+física demostrada. La correspondencia entre las dos posiciones
+requiere un testigo contextual y puede permanecer en `HOLD_QUNO`.
+
+Contrato SIGIL: `JARANIAN_MARICA_REDOBLE_DUALITY_V1`.
+El código genera recibos simbólicos, sin reproducir sonido ni
+alterar la partitura original.
+
 
 En la **capa narrativa y visual**, la frase de la autora
 
