@@ -93,5 +93,15 @@
   "source_pull_request": "https://github.com/jbermejovega/sigilbook/pull/3662",
   "course_pull_request": "https://github.com/jbermejovega/fisicacomputacional/pull/4",
   "source_status": "DRAFT_UNMERGED",
-  "course_status": "DRAFT_UNMERGED"
+  "course_status": "DRAFT_UNMERGED",
+  "relational_spin_pedagogy": {
+    "topic": "site-occurrence-spin coupling and finite frame relabeling",
+    "art_motif": "MARICA_INDIVISIBLE",
+    "kind": "FICTIONAL_QUEER_ART_TROPE",
+    "book_section": "book-physics-arts/practica-ising-qml.qmd",
+    "scientific_energy_mutated": false,
+    "spin_half_not_classical_spin": true,
+    "api_ref": "https://github.com/jbermejovega/sigilbook/pull/3662"
+  },
+  "artistic_motif_is_measurement": false
 }
