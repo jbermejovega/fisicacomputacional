@@ -107,6 +107,51 @@ Compara tres elementos:
 
 Registrar el estilo elegido no cambia por sí mismo el Hamiltoniano.
 
+## Interludio artístico — Cada spin contiene una marica indivisible
+
+En la **capa narrativa y visual**, la frase de la autora
+
+> Cada spin contiene a una pequeña marica indivisible.
+
+se interpreta como una ficción afirmativa: a cada sitio del modelo se le
+asigna un personaje o *trope* artístico individual. Su indivisibilidad es
+**nominal y narrativa**, no una hipótesis sobre partículas elementales,
+identidades humanas, orientación sexual o estados cuánticos.
+
+Para los cuatro sitios, se define una asignación uno-a-uno:
+
+| Sitio físico | Valor Ising | Personaje simbólico |
+|---|---|---|
+| \(s_0\) | \(+1\) | \(\tau_0\) |
+| \(s_1\) | \(+1\) | \(\tau_1\) |
+| \(s_2\) | \(+1\) | \(\tau_2\) |
+| \(s_3\) | \(+1\) | \(\tau_3\) |
+
+Aunque todos los valores físicos coincidan, los cuatro personajes siguen
+siendo distintos: \(s_i=s_j\not\Rightarrow\tau_i=\tau_j\).
+
+**Ejercicio artístico:** diseñar cuatro voces, colores o gestos distintos;
+representar una configuración con espines opuestos y explicar por qué el
+cambio de paleta no modifica \(H(\mathbf s)\). El sonido o la imagen deben
+etiquetarse como *sonificación/visualización* y no como medición física.
+
+**Reflexión avanzada:** la transformación local de etiquetas
+\(s'_i=g_i s_i\), con \(g_i=\pm1\), conserva la forma de la energía al
+transformar también \(J'_{ij}=g_ig_jJ_{ij}\) y \(h'_i=g_ih_i\).
+Esto es una reparametrización, no necesariamente una simetría de las
+interacciones si estas permanecen fijadas.
+
+**Límite cuántico:** el bit computacional representa un autovalor de
+\(Z_i\), mientras que el operador físico de componente de spin es
+\(S_{z,i}=(\hbar/2)Z_i\). Una etiqueta clásica no especifica un estado
+cuántico arbitrario.
+
+En SIGIL, esta distinción se documenta mediante el adaptador artístico
+\`SIGIL_SYMBOLIK_SPIN_MARICA_INDIVISIBLE_TROPE_V1\`. Su API permanece
+propuesta y no es requisito para ejecutar la práctica local de Python.
+
+---
+
 # Paso 5 — Interpretación y evaluación
 
 Entrega un script o cuaderno, un gráfico o tabla de las 16 energías,
