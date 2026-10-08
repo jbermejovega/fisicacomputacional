@@ -89,5 +89,9 @@
     "NO_COERCION",
     "SAFE_REPLAY",
     "PIORNALEGO_ES_CANON"
-  ]
+  ],
+  "source_pull_request": "https://github.com/jbermejovega/sigilbook/pull/3662",
+  "course_pull_request": "https://github.com/jbermejovega/fisicacomputacional/pull/4",
+  "source_status": "DRAFT_UNMERGED",
+  "course_status": "DRAFT_UNMERGED"
 }
