@@ -43,7 +43,8 @@ class CourseOpenTests(unittest.TestCase):
         value = fortuin_kasteleyn(3, [(0,1),(1,2),(0,2)], q, v)
         expected = q**3 + 3*q**2*v + 3*q*v**2 + q*v**3
         self.assertEqual(sp.expand(value-expected), 0)
-        self.assertEqual(chromatic_triangle(), q*(q-1)*(q-2))
+        q_chromatic = sp.symbols("q", integer=True, positive=True)
+        self.assertEqual(chromatic_triangle(), q_chromatic*(q_chromatic-1)*(q_chromatic-2))
 
     def test_isings_small_partition(self):
         z, corr = two_spin_ising()
