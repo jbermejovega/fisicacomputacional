@@ -1,0 +1,233 @@
+{
+  "schema_id": "FISICACOMPUTACIONAL_HYPERJARRA_KRONE_OPEN_COURSE_INDEX_V1",
+  "version": "1.0.0",
+  "repository": "jbermejovega/fisicacomputacional",
+  "original_main_revision": "3700fc6f70b0b48bba924e62d37c541457e8a044",
+  "derived_from_previous_index": {
+    "schema_id": "HYPERJARRA_SIGILBOOK_AST_INDEX_V1",
+    "schema_categorical": "TOTAL_HYPERJARRA_CATEGORICAL_INDEX_JARA_TOP_V1",
+    "parent_system": "SIGILITAS_SYSTEM_FINAL_HYPERJARRA_LLAMA_BIBLIOTECA_V3",
+    "predecessor_sigilbook_reference": "resources/hyperjarra/HYPERJARRA_SIGILBOOK_INDEX_V1.reference.json",
+    "relationship": "PUBLIC_EDUCATIONAL_PROJECTION_NO_REWRITE",
+    "categorical_apex_remains": "JARA_TOP_ONLY_WITHIN_ITS_EXISTING_INDEX_CATEGORY"
+  },
+  "authorial_notice": "Original teaching material © 2026 Jara Juana Bermejo Vega. Attribution and specific licensed scopes in curso_abierto/LICENCIAS.md.",
+  "records": [
+    {
+      "id": "FC-TOOLS",
+      "title": "Herramientas, terminal y entorno científico",
+      "kind": "LEGACY_COURSE_SOURCE",
+      "path": "00_herramientas/",
+      "topic": "computing_basics",
+      "source": "3700fc6f70b0b48bba924e62d37c541457e8a044",
+      "visibility": "PUBLIC",
+      "release_status": "EXISTING_SOURCE_UNMODIFIED",
+      "license_scope": "INHERITED_UNAUDITED"
+    },
+    {
+      "id": "FC-LINUX",
+      "title": "Linux y comandos",
+      "kind": "LEGACY_COURSE_SOURCE",
+      "path": "02_Linux/",
+      "topic": "operating_systems",
+      "source": "3700fc6f70b0b48bba924e62d37c541457e8a044",
+      "visibility": "PUBLIC",
+      "release_status": "EXISTING_SOURCE_UNMODIFIED",
+      "license_scope": "INHERITED_UNAUDITED"
+    },
+    {
+      "id": "FC-FORTRAN",
+      "title": "Lenguaje Fortran",
+      "kind": "LEGACY_COURSE_SOURCE",
+      "path": "03_Lenguaje_Fortran/",
+      "topic": "programming",
+      "source": "3700fc6f70b0b48bba924e62d37c541457e8a044",
+      "visibility": "PUBLIC",
+      "release_status": "EXISTING_SOURCE_UNMODIFIED",
+      "license_scope": "INHERITED_UNAUDITED"
+    },
+    {
+      "id": "FC-SOLAR",
+      "title": "Sistema solar y dinámica",
+      "kind": "LEGACY_COURSE_SOURCE",
+      "path": "05_Sistema_Solar/",
+      "topic": "numerical_dynamics",
+      "source": "3700fc6f70b0b48bba924e62d37c541457e8a044",
+      "visibility": "PUBLIC",
+      "release_status": "EXISTING_SOURCE_UNMODIFIED",
+      "license_scope": "INHERITED_UNAUDITED"
+    },
+    {
+      "id": "FC-ISING",
+      "title": "Monte Carlo e Ising",
+      "kind": "LEGACY_COURSE_SOURCE",
+      "path": "06_Monte_Carlo_Ising/",
+      "topic": "statistical_physics",
+      "source": "3700fc6f70b0b48bba924e62d37c541457e8a044",
+      "visibility": "PUBLIC",
+      "release_status": "EXISTING_SOURCE_UNMODIFIED",
+      "license_scope": "INHERITED_UNAUDITED"
+    },
+    {
+      "id": "FC-SCHRODINGER",
+      "title": "Schrödinger y métodos numéricos",
+      "kind": "LEGACY_COURSE_SOURCE",
+      "path": "07_Leccion_Schrodinger/",
+      "topic": "quantum_physics",
+      "source": "3700fc6f70b0b48bba924e62d37c541457e8a044",
+      "visibility": "PUBLIC",
+      "release_status": "EXISTING_SOURCE_UNMODIFIED",
+      "license_scope": "INHERITED_UNAUDITED"
+    },
+    {
+      "id": "FC-README",
+      "title": "Entrada PACADOC/KQC",
+      "kind": "LEGACY_COURSE_SOURCE",
+      "path": "PACADOC.md",
+      "topic": "reproducibility",
+      "source": "3700fc6f70b0b48bba924e62d37c541457e8a044",
+      "visibility": "PUBLIC",
+      "release_status": "EXISTING_SOURCE_UNMODIFIED",
+      "license_scope": "INHERITED_UNAUDITED"
+    },
+    {
+      "id": "CA-00",
+      "title": "Wrap-up de Física Computacional",
+      "kind": "ORIGINAL_OPEN_CHAPTER",
+      "path": "curso_abierto/CAPITULO_00_WRAP_UP.md",
+      "topic": "integrated_review",
+      "source": "CURRENT_EDITION_FILE_SOURCE_NO_REVIEWED_COMMIT_PIN",
+      "visibility": "PUBLIC",
+      "release_status": "SOURCE_AUTHORED_ON_BRANCH_PENDING_MERGE",
+      "license_scope": "NEW_DOCUMENTATION_CC_BY_4_0"
+    },
+    {
+      "id": "CA-01",
+      "title": "Computación cuántica desde la física",
+      "kind": "ORIGINAL_OPEN_CHAPTER",
+      "path": "curso_abierto/CAPITULO_01_COMPUTACION_CUANTICA.md",
+      "topic": "quantum_computing",
+      "source": "CURRENT_EDITION_FILE_SOURCE_NO_REVIEWED_COMMIT_PIN",
+      "visibility": "PUBLIC",
+      "release_status": "SOURCE_AUTHORED_ON_BRANCH_PENDING_MERGE",
+      "license_scope": "NEW_DOCUMENTATION_CC_BY_4_0"
+    },
+    {
+      "id": "CA-02",
+      "title": "Combinatoria algebraica para Ising/Potts",
+      "kind": "ORIGINAL_OPEN_CHAPTER",
+      "path": "curso_abierto/CAPITULO_02_COMBINATORIA_ALGEBRAICA.md",
+      "topic": "algebraic_combinatorics",
+      "source": "CURRENT_EDITION_FILE_SOURCE_NO_REVIEWED_COMMIT_PIN",
+      "visibility": "PUBLIC",
+      "release_status": "SOURCE_AUTHORED_ON_BRANCH_PENDING_MERGE",
+      "license_scope": "NEW_DOCUMENTATION_CC_BY_4_0"
+    },
+    {
+      "id": "CA-03",
+      "title": "Humanidades digitales, biblioteca y procedencia",
+      "kind": "ORIGINAL_OPEN_CHAPTER",
+      "path": "curso_abierto/CAPITULO_03_BIBLIOTECAS_HUMANIDADES_DIGITALES.md",
+      "topic": "digital_humanities",
+      "source": "CURRENT_EDITION_FILE_SOURCE_NO_REVIEWED_COMMIT_PIN",
+      "visibility": "PUBLIC",
+      "release_status": "SOURCE_AUTHORED_ON_BRANCH_PENDING_MERGE",
+      "license_scope": "NEW_DOCUMENTATION_CC_BY_4_0"
+    },
+    {
+      "id": "CA-04",
+      "title": "Sistemas complejos y materia condensada",
+      "kind": "ORIGINAL_OPEN_CHAPTER",
+      "path": "curso_abierto/CAPITULO_04_SISTEMAS_COMPLEJOS_MATERIA_CONDENSADA.md",
+      "topic": "condensed_matter",
+      "source": "CURRENT_EDITION_FILE_SOURCE_NO_REVIEWED_COMMIT_PIN",
+      "visibility": "PUBLIC",
+      "release_status": "SOURCE_AUTHORED_ON_BRANCH_PENDING_MERGE",
+      "license_scope": "NEW_DOCUMENTATION_CC_BY_4_0"
+    },
+    {
+      "id": "CA-CODE",
+      "title": "Codebook de experimentos simbólicos",
+      "kind": "ORIGINAL_CODEBOOK",
+      "path": "curso_abierto/codebooks/modelos_exactos.py",
+      "topic": "sympy",
+      "source": "CURRENT_EDITION_FILE_SOURCE_NO_REVIEWED_COMMIT_PIN",
+      "visibility": "PUBLIC",
+      "release_status": "SOURCE_AUTHORED_ON_BRANCH_PENDING_MERGE",
+      "license_scope": "NEW_CODE_APACHE_2_0"
+    },
+    {
+      "id": "CA-FIG",
+      "title": "Dibujos algorítmicos SIGIL/SymPy",
+      "kind": "ORIGINAL_CODEBOOK",
+      "path": "curso_abierto/codebooks/dibujos_sympy.py",
+      "topic": "symbolic_figures",
+      "source": "CURRENT_EDITION_FILE_SOURCE_NO_REVIEWED_COMMIT_PIN",
+      "visibility": "PUBLIC",
+      "release_status": "SOURCE_AUTHORED_ON_BRANCH_PENDING_MERGE",
+      "license_scope": "NEW_CODE_APACHE_2_0"
+    },
+    {
+      "id": "CA-SEARCH",
+      "title": "HyperJarra: búsqueda léxica y adaptadores Llama/Ollama",
+      "kind": "ORIGINAL_CODEBOOK",
+      "path": "curso_abierto/codebooks/buscar_indice.py",
+      "topic": "indexing",
+      "source": "CURRENT_EDITION_FILE_SOURCE_NO_REVIEWED_COMMIT_PIN",
+      "visibility": "PUBLIC",
+      "release_status": "SOURCE_AUTHORED_ON_BRANCH_PENDING_MERGE",
+      "license_scope": "NEW_CODE_APACHE_2_0"
+    }
+  ],
+  "index_properties": {
+    "typed_occurrences_distinct": true,
+    "no_identity_transport": true,
+    "no_authority_transport": true,
+    "source_occurrence_is_not_index_entry": true,
+    "summary_is_not_proof": true,
+    "course_review_is_not_journal_peer_review": true
+  },
+  "retrieval": {
+    "canonical_index": "HyperJarraIndexTyped",
+    "local_default": "LEXICAL_INDEX_NO_MODEL",
+    "adapters": [
+      {
+        "provider": "LLAMAINDEX",
+        "role": "INDEX_ADAPTER_OPTIONAL",
+        "imported": false
+      },
+      {
+        "provider": "OLLAMA",
+        "role": "LOCAL_LLM_OR_EMBEDDINGS_OPTIONAL",
+        "model_started": false,
+        "provider_io": false
+      },
+      {
+        "provider": "LLAMA_CPP",
+        "role": "LOCAL_INFERENCE_OPTIONAL",
+        "model_started": false,
+        "provider_io": false
+      },
+      {
+        "provider": "META_LLAMA",
+        "role": "MODEL_FAMILY_DESCRIPTOR_ONLY",
+        "model_started": false
+      }
+    ],
+    "restricted_sources_exportable": false,
+    "review_invitation_confidential_corpus_included": false
+  },
+  "rights": {
+    "legacy_files_relicensed": false,
+    "new_text": "CC-BY-4.0",
+    "new_code": "Apache-2.0",
+    "new_figures": "PROCEDURAL_OUTPUT_PROVENANCE_REVIEW_PER_ASSET",
+    "third_party_rights_preserved": true
+  },
+  "publish_status": "OPEN_SOURCE_COURSE_V1_CANDIDATE",
+  "technical_validation": {
+    "runtime_model_started": false,
+    "external_provider_io": false,
+    "formal_certification": false
+  }
+}
