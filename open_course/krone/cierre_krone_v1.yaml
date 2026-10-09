@@ -1,0 +1,67 @@
+schema_id: FISICACOMPUTACIONAL_CIERRE_KRONE_SIGILBOOK_V1
+version: 0.1.0
+project: jbermejovega/fisicacomputacional
+language: es
+course_surface: open_course/CIERRE_FISICA_COMPUTACIONAL_2026.md
+license_scope: open_course/DERECHOS_Y_FUENTES.md
+authorship: Jara Juana Bermejo Vega
+status: OPEN_COURSE_SOURCE_RELEASE_CANDIDATE
+teaching_relation: CANONICAL_SIGILBOOK_FACET_NOT_OFFICIAL_COURSE_CERTIFICATE
+typed_krone:
+  carrier: KRONE[Model, Method, Params, Units, Evidence, Error, License, Replay]
+  occurrence_fresh: true
+  source_bound: true
+  no_identity_transport: true
+  no_authority_transport: true
+  pydantika_structural_validation_not_scientific_truth: true
+course_domains:
+  resident:
+    - 00_herramientas
+    - 01_Introduccion_Que_son_los_ordenadores
+    - 02_Linux
+    - 03_Lenguaje_Fortran
+    - 03_ejercicio_numeros_aleatorios
+    - 04_GNUplot
+    - 05_Sistema_Solar
+    - 06_Monte_Carlo_Ising
+    - 07_Leccion_Schrodinger
+    - 08_Leccion_Cohete
+    - 09_Voluntarios
+  extension_proposals:
+    - quantum_computing
+    - complex_systems
+    - condensed_matter
+    - algebraic_combinatorics
+    - digital_humanities_and_research_libraries
+learning_outcomes:
+  - id: KRONE_MODEL
+    required: [question, state, assumptions, parameters, physical_units]
+    witness: derivation_and_source_reference
+  - id: KRONE_ALGORITHM
+    required: [algorithm, implementation, reproducible_commands]
+    witness: replayable_codebook_run
+  - id: KRONE_VALIDATION
+    required: [exact_or_limit_case, model_invariant, numerical_error]
+    witness: physics_test_with_interpretation
+  - id: KRONE_RESEARCH_ETHICS
+    required: [provenance, copyright_scope, citation, limitations]
+    witness: cited_sources_and_rights_metadata
+  - id: KRONE_TRANSVERSAL
+    required: [one_classical_example, one_quantum_or_combinatorial_bridge]
+    witness: comparison_across_models_without_claim_of_equivalence
+codebook:
+  source: open_course/codebook/cierre_fisica_sympy.py
+  tests: open_course/tests/test_cierre_fisica_sympy.py
+  executable_examples: [ising_ring_exact, single_qubit_hadamard, boolean_mobius_inversion, svg_hasse_diagram]
+  graphics_generated_on_demand: true
+  graphics_claimed_as_existing_student_drawings: false
+  physics_test_required: true
+publication:
+  type: public_git_repository_source
+  python_environment: environment.yml
+  permissions_scope: NEW_FILES_ONLY
+  external_course_material_copied: false
+  independent_instructor_review: pending
+  degree_or_course_credit_certified: false
+  no_silent_upgrade_of_existing_lessons: true
+protected_pi: PIORNALEGO_ES_CANON
