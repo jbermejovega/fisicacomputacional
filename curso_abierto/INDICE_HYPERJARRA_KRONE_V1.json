@@ -96,9 +96,10 @@
       "kind": "ORIGINAL_OPEN_CHAPTER",
       "path": "curso_abierto/CAPITULO_00_WRAP_UP.md",
       "topic": "integrated_review",
-      "source": "NEW_DOCUMENTATION_CC_BY_4_0",
+      "source": "CURRENT_EDITION_FILE_SOURCE_NO_REVIEWED_COMMIT_PIN",
       "visibility": "PUBLIC",
-      "release_status": "EDITION_V1_SOURCE_AUTHORED"
+      "release_status": "SOURCE_AUTHORED_ON_BRANCH_PENDING_MERGE",
+      "license_scope": "NEW_DOCUMENTATION_CC_BY_4_0"
     },
     {
       "id": "CA-01",
@@ -106,9 +107,10 @@
       "kind": "ORIGINAL_OPEN_CHAPTER",
       "path": "curso_abierto/CAPITULO_01_COMPUTACION_CUANTICA.md",
       "topic": "quantum_computing",
-      "source": "NEW_DOCUMENTATION_CC_BY_4_0",
+      "source": "CURRENT_EDITION_FILE_SOURCE_NO_REVIEWED_COMMIT_PIN",
       "visibility": "PUBLIC",
-      "release_status": "EDITION_V1_SOURCE_AUTHORED"
+      "release_status": "SOURCE_AUTHORED_ON_BRANCH_PENDING_MERGE",
+      "license_scope": "NEW_DOCUMENTATION_CC_BY_4_0"
     },
     {
       "id": "CA-02",
@@ -116,9 +118,10 @@
       "kind": "ORIGINAL_OPEN_CHAPTER",
       "path": "curso_abierto/CAPITULO_02_COMBINATORIA_ALGEBRAICA.md",
       "topic": "algebraic_combinatorics",
-      "source": "NEW_DOCUMENTATION_CC_BY_4_0",
+      "source": "CURRENT_EDITION_FILE_SOURCE_NO_REVIEWED_COMMIT_PIN",
       "visibility": "PUBLIC",
-      "release_status": "EDITION_V1_SOURCE_AUTHORED"
+      "release_status": "SOURCE_AUTHORED_ON_BRANCH_PENDING_MERGE",
+      "license_scope": "NEW_DOCUMENTATION_CC_BY_4_0"
     },
     {
       "id": "CA-03",
@@ -126,9 +129,10 @@
       "kind": "ORIGINAL_OPEN_CHAPTER",
       "path": "curso_abierto/CAPITULO_03_BIBLIOTECAS_HUMANIDADES_DIGITALES.md",
       "topic": "digital_humanities",
-      "source": "NEW_DOCUMENTATION_CC_BY_4_0",
+      "source": "CURRENT_EDITION_FILE_SOURCE_NO_REVIEWED_COMMIT_PIN",
       "visibility": "PUBLIC",
-      "release_status": "EDITION_V1_SOURCE_AUTHORED"
+      "release_status": "SOURCE_AUTHORED_ON_BRANCH_PENDING_MERGE",
+      "license_scope": "NEW_DOCUMENTATION_CC_BY_4_0"
     },
     {
       "id": "CA-04",
@@ -136,9 +140,10 @@
       "kind": "ORIGINAL_OPEN_CHAPTER",
       "path": "curso_abierto/CAPITULO_04_SISTEMAS_COMPLEJOS_MATERIA_CONDENSADA.md",
       "topic": "condensed_matter",
-      "source": "NEW_DOCUMENTATION_CC_BY_4_0",
+      "source": "CURRENT_EDITION_FILE_SOURCE_NO_REVIEWED_COMMIT_PIN",
       "visibility": "PUBLIC",
-      "release_status": "EDITION_V1_SOURCE_AUTHORED"
+      "release_status": "SOURCE_AUTHORED_ON_BRANCH_PENDING_MERGE",
+      "license_scope": "NEW_DOCUMENTATION_CC_BY_4_0"
     },
     {
       "id": "CA-CODE",
@@ -146,9 +151,10 @@
       "kind": "ORIGINAL_CODEBOOK",
       "path": "curso_abierto/codebooks/modelos_exactos.py",
       "topic": "sympy",
-      "source": "NEW_CODE_APACHE_2_0",
+      "source": "CURRENT_EDITION_FILE_SOURCE_NO_REVIEWED_COMMIT_PIN",
       "visibility": "PUBLIC",
-      "release_status": "EDITION_V1_SOURCE_AUTHORED"
+      "release_status": "SOURCE_AUTHORED_ON_BRANCH_PENDING_MERGE",
+      "license_scope": "NEW_CODE_APACHE_2_0"
     },
     {
       "id": "CA-FIG",
@@ -156,9 +162,21 @@
       "kind": "ORIGINAL_CODEBOOK",
       "path": "curso_abierto/codebooks/dibujos_sympy.py",
       "topic": "symbolic_figures",
-      "source": "NEW_CODE_APACHE_2_0",
+      "source": "CURRENT_EDITION_FILE_SOURCE_NO_REVIEWED_COMMIT_PIN",
       "visibility": "PUBLIC",
-      "release_status": "EDITION_V1_SOURCE_AUTHORED"
+      "release_status": "SOURCE_AUTHORED_ON_BRANCH_PENDING_MERGE",
+      "license_scope": "NEW_CODE_APACHE_2_0"
+    },
+    {
+      "id": "CA-SEARCH",
+      "title": "HyperJarra: búsqueda léxica y adaptadores Llama/Ollama",
+      "kind": "ORIGINAL_CODEBOOK",
+      "path": "curso_abierto/codebooks/buscar_indice.py",
+      "topic": "indexing",
+      "source": "CURRENT_EDITION_FILE_SOURCE_NO_REVIEWED_COMMIT_PIN",
+      "visibility": "PUBLIC",
+      "release_status": "SOURCE_AUTHORED_ON_BRANCH_PENDING_MERGE",
+      "license_scope": "NEW_CODE_APACHE_2_0"
     }
   ],
   "index_properties": {
