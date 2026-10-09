@@ -10,6 +10,7 @@
 - [KRONE · Índice tipado de competencias](krone/cierre_krone_v1.yaml): cinco objetivos, rutas, condiciones y evidencias de aprendizaje.
 - [Codebook original SymPy](codebook/cierre_fisica_sympy.py): Ising exacto, qubits y combinatoria; produce un diagrama SVG original.
 - [Derechos, bibliografía y atribución](DERECHOS_Y_FUENTES.md).
+- [Vínculo canónico con SIGILBOOK V2](../docs/teaching/SIGILBOOK_FISICA_COMPUTACIONAL_KRONE_WRAPUP_BRIDGE_V2.md): correspondencia con los 20 capítulos fuente y límites de acceso; este curso funciona de forma autónoma.
 
 ## Ejecutar
 

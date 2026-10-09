@@ -1,0 +1,45 @@
+schema_id: FISICACOMPUTACIONAL_SIGILBOOK_V2_SOURCE_BRIDGE
+version: 1.0.0
+kind: SOURCE_BOUND_PUBLIC_OPEN_COURSE_WRAPUP_PROJECTION
+authorial_context: Jara Juana Bermejo Vega
+date: 2026-10-09
+status: PUBLIC_COURSE_FACET_SOURCE_BOUND
+source_private:
+  repo: jbermejovega/sigilbook
+  master_book: books/pluraltype_computational_physics/PLURALTYPE_COMPUTATIONAL_PHYSICS_TEXTBOOK_MASTER_V1.md
+  edition_index: books/pluraltype_computational_physics/OPEN_TEXTBOOK_KRONE_EDITION_V2.md
+  pinned_commit: 63c01f0001074d5f76294811c28ee3288c13e574
+  previous_chapters_preserved: 16
+  source_bound_complementary_chapters: [17, 18, 19, 20]
+public_reuse:
+  repo: jbermejovega/fisicacomputacional
+  chapter: open_course/CIERRE_FISICA_COMPUTACIONAL_2026.md
+  krone: open_course/krone/cierre_krone_v1.yaml
+  codebook: open_course/codebook/cierre_fisica_sympy.py
+  rights_notice: open_course/DERECHOS_Y_FUENTES.md
+  status: ALREADY_PUBLISHED_IN_PUBLIC_MAIN
+  prior_main_commit: 0c0316c5d05709d5448a847aec74282d16a34b8c
+  private_source_bytes_copied: false
+  confidential_reviewer_materials_copied: false
+learning_distinctions:
+  already_resident: [linux_and_programming, classical_dynamics, random_sampling, ising_monte_carlo, schrodinger]
+  extensions: [quantum_computation, complex_systems, condensed_matter, algebraic_combinatorics, digital_humanities]
+  validated_open_course_subject: false
+  official_grade_or_credit_asserted: false
+checks:
+  static_path_audit: PASS_SOURCE_BINDING
+  dynamic_python_unittest: NOT_OBSERVED_IN_THIS_INTEGRATION
+  git_ci_execution: NOT_OBSERVED_IN_THIS_INTEGRATION
+  mathematical_exactness_not_formal_proof: true
+rights:
+  new_course_texts: SEE_EXPLICIT_OPEN_COURSE_RIGHTS_NOTICE
+  previously_present_files_relicensed: false
+  third_party_material_copied: false
+  private_repository_open_access_assumed: false
+invariants:
+  source_identity_preserved: true
+  context_ne_access: true
+  private_edition_ne_public_projection: true
+  identity_transport: false
+  authority_transport: false
+protected_pi: PIORNALEGO_ES_CANON
