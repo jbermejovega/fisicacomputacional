@@ -1,4 +1,22 @@
 # Física Computacional
+## SIGILBOOK · libro abierto y cierre del curso
+
+La [edición abierta del libro de Física Computacional](open_course/README.md) añade un
+[capítulo de cierre transversal](open_course/CIERRE_FISICA_COMPUTACIONAL_2026.md),
+ejercicios originales y un [codebook reproducible de SymPy](open_course/codebook/cierre_fisica_sympy.py).
+
+Esta nueva capa **no reemplaza** las lecciones residentes ni afirma que las
+extensiones (computación cuántica, combinatoria algebraica, sistemas complejos,
+materia condensada o Humanidades Digitales) ya formaran parte del temario
+impartido. Conserva copyright y licencias por archivo:
+[Derechos y fuentes](open_course/DERECHOS_Y_FUENTES.md).
+
+```bash
+python open_course/codebook/cierre_fisica_sympy.py
+python -m unittest discover -s open_course/tests -p 'test_*.py'
+python tools/validate_course_kqc.py
+```
+
 
 ## PACADOC FIRST-USER NORMALIZATION
 
