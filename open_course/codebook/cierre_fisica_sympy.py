@@ -15,7 +15,7 @@ import json
 from pathlib import Path
 from xml.sax.saxutils import escape
 
-from sympy import I, Integer, Matrix, S, exp, log, simplify, sqrt, symbols
+from sympy import Integer, Matrix, exp, log, simplify, sqrt
 
 
 def ising_energy(spins: tuple[int, ...], coupling=1, field=0):
