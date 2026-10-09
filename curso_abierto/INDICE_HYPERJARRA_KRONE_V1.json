@@ -96,9 +96,9 @@
       "kind": "ORIGINAL_OPEN_CHAPTER",
       "path": "curso_abierto/CAPITULO_00_WRAP_UP.md",
       "topic": "integrated_review",
-      "source": "CURRENT_EDITION_FILE_SOURCE_NO_REVIEWED_COMMIT_PIN",
+      "source": "jbermejovega/fisicacomputacional@04193c1438ca1493af0c2da772551296600c1cd0",
       "visibility": "PUBLIC",
-      "release_status": "SOURCE_AUTHORED_ON_BRANCH_PENDING_MERGE",
+      "release_status": "PUBLISHED_MAIN_SOURCE_COMMIT",
       "license_scope": "NEW_DOCUMENTATION_CC_BY_4_0"
     },
     {
@@ -107,9 +107,9 @@
       "kind": "ORIGINAL_OPEN_CHAPTER",
       "path": "curso_abierto/CAPITULO_01_COMPUTACION_CUANTICA.md",
       "topic": "quantum_computing",
-      "source": "CURRENT_EDITION_FILE_SOURCE_NO_REVIEWED_COMMIT_PIN",
+      "source": "jbermejovega/fisicacomputacional@04193c1438ca1493af0c2da772551296600c1cd0",
       "visibility": "PUBLIC",
-      "release_status": "SOURCE_AUTHORED_ON_BRANCH_PENDING_MERGE",
+      "release_status": "PUBLISHED_MAIN_SOURCE_COMMIT",
       "license_scope": "NEW_DOCUMENTATION_CC_BY_4_0"
     },
     {
@@ -118,9 +118,9 @@
       "kind": "ORIGINAL_OPEN_CHAPTER",
       "path": "curso_abierto/CAPITULO_02_COMBINATORIA_ALGEBRAICA.md",
       "topic": "algebraic_combinatorics",
-      "source": "CURRENT_EDITION_FILE_SOURCE_NO_REVIEWED_COMMIT_PIN",
+      "source": "jbermejovega/fisicacomputacional@04193c1438ca1493af0c2da772551296600c1cd0",
       "visibility": "PUBLIC",
-      "release_status": "SOURCE_AUTHORED_ON_BRANCH_PENDING_MERGE",
+      "release_status": "PUBLISHED_MAIN_SOURCE_COMMIT",
       "license_scope": "NEW_DOCUMENTATION_CC_BY_4_0"
     },
     {
@@ -129,9 +129,9 @@
       "kind": "ORIGINAL_OPEN_CHAPTER",
       "path": "curso_abierto/CAPITULO_03_BIBLIOTECAS_HUMANIDADES_DIGITALES.md",
       "topic": "digital_humanities",
-      "source": "CURRENT_EDITION_FILE_SOURCE_NO_REVIEWED_COMMIT_PIN",
+      "source": "jbermejovega/fisicacomputacional@04193c1438ca1493af0c2da772551296600c1cd0",
       "visibility": "PUBLIC",
-      "release_status": "SOURCE_AUTHORED_ON_BRANCH_PENDING_MERGE",
+      "release_status": "PUBLISHED_MAIN_SOURCE_COMMIT",
       "license_scope": "NEW_DOCUMENTATION_CC_BY_4_0"
     },
     {
@@ -140,9 +140,9 @@
       "kind": "ORIGINAL_OPEN_CHAPTER",
       "path": "curso_abierto/CAPITULO_04_SISTEMAS_COMPLEJOS_MATERIA_CONDENSADA.md",
       "topic": "condensed_matter",
-      "source": "CURRENT_EDITION_FILE_SOURCE_NO_REVIEWED_COMMIT_PIN",
+      "source": "jbermejovega/fisicacomputacional@04193c1438ca1493af0c2da772551296600c1cd0",
       "visibility": "PUBLIC",
-      "release_status": "SOURCE_AUTHORED_ON_BRANCH_PENDING_MERGE",
+      "release_status": "PUBLISHED_MAIN_SOURCE_COMMIT",
       "license_scope": "NEW_DOCUMENTATION_CC_BY_4_0"
     },
     {
@@ -151,9 +151,9 @@
       "kind": "ORIGINAL_CODEBOOK",
       "path": "curso_abierto/codebooks/modelos_exactos.py",
       "topic": "sympy",
-      "source": "CURRENT_EDITION_FILE_SOURCE_NO_REVIEWED_COMMIT_PIN",
+      "source": "jbermejovega/fisicacomputacional@04193c1438ca1493af0c2da772551296600c1cd0",
       "visibility": "PUBLIC",
-      "release_status": "SOURCE_AUTHORED_ON_BRANCH_PENDING_MERGE",
+      "release_status": "PUBLISHED_MAIN_SOURCE_COMMIT",
       "license_scope": "NEW_CODE_APACHE_2_0"
     },
     {
@@ -162,9 +162,9 @@
       "kind": "ORIGINAL_CODEBOOK",
       "path": "curso_abierto/codebooks/dibujos_sympy.py",
       "topic": "symbolic_figures",
-      "source": "CURRENT_EDITION_FILE_SOURCE_NO_REVIEWED_COMMIT_PIN",
+      "source": "jbermejovega/fisicacomputacional@04193c1438ca1493af0c2da772551296600c1cd0",
       "visibility": "PUBLIC",
-      "release_status": "SOURCE_AUTHORED_ON_BRANCH_PENDING_MERGE",
+      "release_status": "PUBLISHED_MAIN_SOURCE_COMMIT",
       "license_scope": "NEW_CODE_APACHE_2_0"
     },
     {
@@ -173,9 +173,9 @@
       "kind": "ORIGINAL_CODEBOOK",
       "path": "curso_abierto/codebooks/buscar_indice.py",
       "topic": "indexing",
-      "source": "CURRENT_EDITION_FILE_SOURCE_NO_REVIEWED_COMMIT_PIN",
+      "source": "jbermejovega/fisicacomputacional@04193c1438ca1493af0c2da772551296600c1cd0",
       "visibility": "PUBLIC",
-      "release_status": "SOURCE_AUTHORED_ON_BRANCH_PENDING_MERGE",
+      "release_status": "PUBLISHED_MAIN_SOURCE_COMMIT",
       "license_scope": "NEW_CODE_APACHE_2_0"
     }
   ],
@@ -224,10 +224,11 @@
     "new_figures": "PROCEDURAL_OUTPUT_PROVENANCE_REVIEW_PER_ASSET",
     "third_party_rights_preserved": true
   },
-  "publish_status": "OPEN_SOURCE_COURSE_V1_CANDIDATE",
+  "publish_status": "PUBLISHED_IN_MAIN_SOURCE_BOUND",
   "technical_validation": {
     "runtime_model_started": false,
     "external_provider_io": false,
     "formal_certification": false
-  }
+  },
+  "first_publication_commit": "04193c1438ca1493af0c2da772551296600c1cd0"
 }
