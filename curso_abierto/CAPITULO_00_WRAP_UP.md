@@ -19,44 +19,44 @@ eq0). Distinguimos error de redondeo, truncamiento, estimación estadística y e
 
 ## 0.3. Integradores, conservación y dinámica
 
-Las prácticas del [Sistema Solar](../05_Sistema_Solar/) y del [Cohete](../08_Leccion_Cohete/) son dos laboratorios de ecuaciones diferenciales. Dado (dot y=f(t,y)), Euler explícito tiene orden global 1; Runge–Kutta clásico orden global 4 bajo hipótesis adecuadas de suavidad y estabilidad. En sistemas hamiltonianos es crucial distinguir orden local de preservación cualitativa a tiempos largos.
+Las prácticas del [Sistema Solar](../05_Sistema_Solar/) y del [Cohete](../08_Leccion_Cohete/) son dos laboratorios de ecuaciones diferenciales. Dado \(\dot y=f(t,y)\), Euler explícito tiene orden global 1; Runge–Kutta clásico orden global 4 bajo hipótesis adecuadas de suavidad y estabilidad. En sistemas hamiltonianos es crucial distinguir orden local de preservación cualitativa a tiempos largos.
 
 Para (dot x=v), (dot v=a(x)), el esquema de *velocity Verlet* es:
 
-[x_{n+1}=x_n+v_nDelta t+	frac12 a(x_n)Delta t^2,]
-[v_{n+1}=v_n+	frac12[a(x_n)+a(x_{n+1})]Delta t.]
+\[x_{n+1}=x_n+v_n\Delta t+\tfrac12 a(x_n)\Delta t^2,\]
+\[v_{n+1}=v_n+\tfrac12[a(x_n)+a(x_{n+1})]\Delta t.\]
 
 En un problema conservativo compara energía (H), momento angular cuando exista esa simetría, error de trayectoria frente a una referencia y deriva al aumentar el tiempo. Un método simpléctico puede conservar mejor la estructura geométrica a largo plazo sin conservar exactamente el valor de la energía en cada paso.
 
-**Actividad de cierre:** traza (E(Delta t)) en escala log-log para al menos tres pasos; estima la pendiente sin confundirla con una prueba de convergencia universal. Identifica una escala donde redondeo, estabilidad o condición inicial domina.
+**Actividad de cierre:** traza \(E(\Delta t)\) en escala log-log para al menos tres pasos; estima la pendiente sin confundirla con una prueba de convergencia universal. Identifica una escala donde redondeo, estabilidad o condición inicial domina.
 
 ## 0.4. Aleatoriedad, Monte Carlo y física estadística
 
-Un generador pseudoaleatorio produce secuencias deterministas a partir de una semilla. La semilla es condición de **repetibilidad**, no garantía de buena calidad estadística. La práctica [Monte Carlo–Ising](../06_Monte_Carlo_Ising/) utiliza una distribución de Boltzmann (p_eta(s)propto e^{-eta H(s)}), con (eta=1/(k_B T)).
+Un generador pseudoaleatorio produce secuencias deterministas a partir de una semilla. La semilla es condición de **repetibilidad**, no garantía de buena calidad estadística. La práctica [Monte Carlo–Ising](../06_Monte_Carlo_Ising/) utiliza una distribución de Boltzmann \(p_\beta(s)\propto e^{-\beta H(s)}\), con \(\beta=1/(k_B T)\).
 
-Para el Ising clásico (H=-Jsum_{langle i,jangle}s_i s_j-hsum_i s_i), (s_iin{-1,+1}), una actualización simétrica de Metropolis admite un cambio con
+Para el Ising clásico \(H=-J\sum_{\langle i,j\rangle}s_i s_j-h\sum_i s_i\), \(s_i\in\{-1,+1\}\), una actualización simétrica de Metropolis admite un cambio con
 
-[P_{mathrm{aceptar}}=min(1,e^{-etaDelta E}).]
+\[P_{\mathrm{aceptar}}=\min(1,e^{-\beta\Delta E}).\]
 
 El código debe explicar la política de contorno, el orden de barrido, el calentamiento, la medida de magnetización y la estimación del error. Las muestras de una cadena de Markov suelen estar autocorrelacionadas; no pueden tratarse indiscriminadamente como observaciones independientes.
 
 Como prueba analítica mínima, para **dos espines** y (h=0):
 
-[Z_2=2e^{eta J}+2e^{-eta J}=4cosh(eta J),qquad langle s_1s_2angle=	anh(eta J).]
+\[Z_2=2e^{\beta J}+2e^{-\beta J}=4\cosh(\beta J),\qquad \langle s_1s_2\rangle=\tanh(\beta J).\]
 
-Este resultado permite verificar un simulador pequeño con todos los microestados enumerados antes de intentar redes grandes. Para una estimación con (N) muestras y tiempo de autocorrelación integrado (	au_{mathrm{int}}=	frac12+sum_{tgeq1}ho(t)), se utiliza como orientación (N_{mathrm{eff}}simeq N/(2	au_{mathrm{int}})) cuando la estimación de (	au_{mathrm{int}}) es estable.
+Este resultado permite verificar un simulador pequeño con todos los microestados enumerados antes de intentar redes grandes. Para una estimación con \(N\) muestras y tiempo de autocorrelación integrado \(\tau_{\mathrm{int}}=\tfrac12+\sum_{t\geq1}\rho(t)\), se utiliza como orientación \(N_{\mathrm{eff}}\simeq N/(2\tau_{\mathrm{int}})\) cuando la estimación de \(\tau_{\mathrm{int}}\) es estable.
 
-**Actividad de cierre:** compara la estimación Monte Carlo de (langle s_1s_2angle) con (	anh(eta J)) en dos temperaturas; informa semilla, número de barridos, calentamiento, incertidumbre y diferencias.
+**Actividad de cierre:** compara la estimación Monte Carlo de \(\langle s_1s_2\rangle\) con \(\tanh(\beta J)\) en dos temperaturas; informa semilla, número de barridos, calentamiento, incertidumbre y diferencias.
 
 ## 0.5. Schrödinger, operadores y matrices
 
-La práctica [Schrödinger](../07_Leccion_Schrodinger/) es un laboratorio de algebra lineal, condiciones de contorno y evolución temporal. Para un Hamiltoniano hermítico (H=H^dagger) independiente del tiempo:
+La práctica [Schrödinger](../07_Leccion_Schrodinger/) es un laboratorio de álgebra lineal, condiciones de contorno y evolución temporal. Para un Hamiltoniano hermítico \(H=H^\dagger\) independiente del tiempo:
 
-[ihbarpartial_t|psi(t)angle=H|psi(t)angle,qquad U(t)=e^{-iHt/hbar}.]
+\[i\hbar\partial_t|\psi(t)\rangle=H|\psi(t)\rangle,\qquad U(t)=e^{-iHt/\hbar}.\]
 
-Como (U^dagger U=I), se conserva (|psi(t)|_2), además del producto interno entre estados evolucionados por el mismo operador. Una aproximación numérica puede violar esta propiedad por truncamiento o por un integrador inapropiado.
+Como \(U^\dagger U=I\), se conserva \(\|\psi(t)\|_2\), además del producto interno entre estados evolucionados por el mismo operador. Una aproximación numérica puede violar esta propiedad por truncamiento o por un integrador inapropiado.
 
-Para (H=-(hbar^2/2m)partial_x^2+V(x)), la diferencia centrada (partial_x^2psi(x_j)approx(psi_{j-1}-2psi_j+psi_{j+1})/Delta x^2) induce una matriz tridiagonal. Especifica el dominio, contornos y pesos de cuadratura antes de normalizar el vector discreto.
+Para \(H=-(\hbar^2/2m)\partial_x^2+V(x)\), la diferencia centrada \(\partial_x^2\psi(x_j)\approx(\psi_{j-1}-2\psi_j+\psi_{j+1})/\Delta x^2\) induce una matriz tridiagonal. Especifica el dominio, contornos y pesos de cuadratura antes de normalizar el vector discreto.
 
 **Actividad de cierre:** calcula los dos primeros niveles de una caja 1D para varias resoluciones; verifica convergencia y conservación de norma durante una propagación. Escribe claramente qué cambia si los contornos son periódicos.
 
@@ -66,7 +66,7 @@ Para (H=-(hbar^2/2m)partial_x^2+V(x)), la diferencia centrada (partial_x^2psi(x_
 |---|---|---|---|
 | Órbitas | Estado continuo (y(t)) | Integración EDO | Energía, momento angular, orden de error |
 | Ising | Configuración discreta (s) | MCMC | Distribución de Boltzmann, correlaciones |
-| Schrödinger | Vector complejo (psi) | Matrices y propagación | Norma, autovalores, dispersión |
+| Schrödinger | Vector complejo \(\psi\) | Matrices y propagación | Norma, autovalores, dispersión |
 | Grafos y redes | Vértices + aristas | Combinatoria/espectro | Componentes, simetrías, conectividad |
 | Archivo digital | Fuentes + metadatos | Extracción y consulta | Derechos, procedencia, integridad |
 
