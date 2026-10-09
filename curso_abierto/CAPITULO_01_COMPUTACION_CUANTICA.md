@@ -4,25 +4,25 @@
 
 ## 1.1. Una nueva representación de un sistema físico
 
-En física clásica una variable discreta con dos estados toma valores en ({0,1}). Un qubit puro es un vector unitario de (mathbb C^2), salvo fase global: (|psiangle=alpha|0angle+eta|1angle) con (|alpha|^2+|eta|^2=1). Un registro de (n) qubits vive en ((mathbb C^2)^{otimes n}), de dimensión (2^n). El vector de amplitudes no es una distribución clásica: contiene fases e interferencias.
+En física clásica una variable discreta con dos estados toma valores en \(\{0,1\}\). Un qubit puro es un vector unitario de \(\mathbb C^2\), salvo fase global: \(|\psi\rangle=\alpha|0\rangle+\beta|1\rangle\) con \(|\alpha|^2+|\beta|^2=1\). Un registro de \(n\) qubits vive en \((\mathbb C^2)^{\otimes n}\), de dimensión \(2^n\). El vector de amplitudes no es una distribución clásica: contiene fases e interferencias.
 
-Convenciones: (|0angle=(1,0)^T), (|1angle=(0,1)^T). Las compuertas de un qubit son matrices unitarias. Por ejemplo:
+Convenciones: \(|0\rangle=(1,0)^T\), \(|1\rangle=(0,1)^T\). Las compuertas de un qubit son matrices unitarias. Por ejemplo:
 
-[H=rac1{sqrt2}egin{pmatrix}1&1\1&-1end{pmatrix},qquad X=egin{pmatrix}0&1\1&0end{pmatrix}.]
+\[H=\frac1{\sqrt2}\begin{pmatrix}1&1\\1&-1\end{pmatrix},\qquad X=\begin{pmatrix}0&1\\1&0\end{pmatrix}.\]
 
-Verifica simbólicamente (H^dagger H=I) y (H^2=I). Tras (H|0angle), ambos resultados computacionales ocurren con probabilidad (1/2); una medición elimina las coherencias de esa base si no se conserva el resultado y el estado postmedición.
+Verifica simbólicamente \(H^\dagger H=I\) y \(H^2=I\). Tras \(H|0\rangle\), ambos resultados computacionales ocurren con probabilidad \(1/2\); una medición elimina las coherencias de esa base si no se conserva el resultado y el estado postmedición.
 
 ## 1.2. Mediciones y estadística
 
-Para un proyector (P), la regla de Born da (p=langlepsi|P|psiangle). En un experimento con (N) medidas independientes de una probabilidad (p), el error estándar de la frecuencia es aproximadamente (sqrt{p(1-p)/N}). Las muestras de un simulador que devuelve (p) exactamente no son equivalentes a (N) disparos (*shots*) de un dispositivo físico.
+Para un proyector \(P\), la regla de Born da \(p=\langle\psi|P|\psi\rangle\). En un experimento con \(N\) medidas independientes de una probabilidad \(p\), el error estándar de la frecuencia es aproximadamente \(\sqrt{p(1-p)/N}\). Las muestras de un simulador que devuelve \(p\) exactamente no son equivalentes a \(N\) disparos (*shots*) de un dispositivo físico.
 
-**Ejercicio:** prepara en código la salida ideal de (|+angle=H|0angle), simula 100, 1.000 y 10.000 medidas con una semilla fija y compara con el error estándar binomial. Explica qué magnitud converge y qué hipótesis se necesitan.
+**Ejercicio:** prepara en código la salida ideal de \(|+\rangle=H|0\rangle\), simula 100, 1.000 y 10.000 medidas con una semilla fija y compara con el error estándar binomial. Explica qué magnitud converge y qué hipótesis se necesitan.
 
 ## 1.3. Productos tensoriales, compuertas controladas y entrelazamiento
 
-El estado (|00angle) es separable. Aplicando (Hotimes I) y luego CNOT (primer qubit de control) se obtiene (|Phi^+angle=(|00angle+|11angle)/sqrt2), que no puede factorizarse como (|aangleotimes|bangle). Su matriz de densidad reducida es (ho_A=I/2).
+El estado \(|00\rangle\) es separable. Aplicando \(H\otimes I\) y luego CNOT (primer qubit de control) se obtiene \(|\Phi^+\rangle=(|00\rangle+|11\rangle)/\sqrt2\), que no puede factorizarse como \(|a\rangle\otimes|b\rangle\). Su matriz de densidad reducida es \(\rho_A=I/2\).
 
-**Ejercicio simbólico:** construye el proyector (|Phi^+anglelanglePhi^+|), calcula por suma explícita la traza parcial de B y verifica su pureza (mathrm{tr}(ho_A^2)=1/2). Contrasta con un estado producto, cuya reducción pura tiene (mathrm{tr}(ho_A^2)=1).
+**Ejercicio simbólico:** construye el proyector \(|\Phi^+\rangle\langle\Phi^+|\), calcula por suma explícita la traza parcial de B y verifica su pureza \(\mathrm{tr}(\rho_A^2)=1/2\). Contrasta con un estado producto, cuya reducción pura tiene \(\mathrm{tr}(\rho_A^2)=1\).
 
 ## 1.4. Por qué cuesta simular circuitos
 
