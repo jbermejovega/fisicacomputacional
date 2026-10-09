@@ -1,5 +1,18 @@
 # Física Computacional
 
+## Curso abierto KRONE–HyperJarra (edición V1)
+
+El curso existente se conserva y se amplía con un **wrap-up integrado** y capítulos originales sobre computación cuántica, combinatoria algebraica, materia condensada y bibliotecas de investigación/Humanidades Digitales. El índice reutiliza el linaje anterior HyperJarra de SIGILBOOK sin sustituirlo.
+
+- [Inicio del libro abierto](curso_abierto/README.md)
+- [Índice y lecturas de Física Computacional](curso_abierto/INDICE.md)
+- [Wrap-up del curso](curso_abierto/CAPITULO_00_WRAP_UP.md)
+- [Modelos y dibujos originales en SymPy](curso_abierto/codebooks/modelos_exactos.py)
+- [Licencias específicas de esta edición](curso_abierto/LICENCIAS.md)
+
+Los contenidos preexistentes del repositorio mantienen sus derechos y archivos. Los módulos nuevos tienen licencias expresas por alcance; la búsqueda local no arranca Ollama, llama.cpp ni LlamaIndex.
+
+
 ## PACADOC FIRST-USER NORMALIZATION
 
 This repository is normalized as a replay-safe educational repository for Computational Physics students.
