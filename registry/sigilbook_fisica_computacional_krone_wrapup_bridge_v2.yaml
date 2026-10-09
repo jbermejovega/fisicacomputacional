@@ -42,4 +42,4 @@ invariants:
   private_edition_ne_public_projection: true
   identity_transport: false
   authority_transport: false
-  pipi: PIORNALEGO_ES_CANON
+protected_pi: PIORNALEGO_ES_CANON
