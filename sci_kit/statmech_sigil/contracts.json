@@ -1,0 +1,80 @@
+{
+  "id": "UGR_SCI_KIT_SIGIL_STATMECH_V1",
+  "DSL": {
+    "model": "2D_Ising",
+    "parameters": [
+      "size",
+      "beta",
+      "sweeps",
+      "seed",
+      "J",
+      "h"
+    ],
+    "boundary": "periodic",
+    "dynamics": "single_spin_metropolis"
+  },
+  "DSP": {
+    "checks": [
+      "finite_parameters",
+      "valid_lattice_size",
+      "seeded_replay_hash",
+      "energy_formula",
+      "magnetization_bounds"
+    ],
+    "claims_not_proved": [
+      "thermodynamic_phase_transition",
+      "quantum_equivalence"
+    ]
+  },
+  "PACAPDG": {
+    "nodes": [
+      "validate",
+      "initialize",
+      "sample",
+      "measure",
+      "receipt",
+      "render_optional"
+    ],
+    "edges": [
+      [
+        "validate",
+        "initialize"
+      ],
+      [
+        "initialize",
+        "sample"
+      ],
+      [
+        "sample",
+        "measure"
+      ],
+      [
+        "measure",
+        "receipt"
+      ],
+      [
+        "receipt",
+        "render_optional"
+      ]
+    ]
+  },
+  "QUAZRIS": {
+    "sockets": {
+      "input": "TypedSimulationReceipt",
+      "output": "TypedSceneDescriptor"
+    },
+    "thick_thin": "boundary_contract_required"
+  },
+  "PYTRANADA": {
+    "role": "typed_sector_transport",
+    "identity_authority": false
+  },
+  "KAPSYLA": {
+    "release_requires": [
+      "replay_comparison",
+      "provenance",
+      "backend_verification"
+    ],
+    "documentation_only_not_certification": true
+  }
+}
